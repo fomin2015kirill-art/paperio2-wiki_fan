@@ -1,32 +1,102 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Paper.io 2 Wiki Fan</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#111;
+color:white;
+text-align:center;
+}
+
+header{
+background:#1aff66;
+padding:20px;
+font-size:35px;
+font-weight:bold;
+color:#000;
+box-shadow:0 0 20px #1aff66;
+}
+
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+padding:20px;
+}
+
+button{
+background:#222;
+color:white;
+border:2px solid #1aff66;
+padding:12px 18px;
+border-radius:12px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#1aff66;
+color:black;
+box-shadow:0 0 20px #1aff66;
+}
+
+#content{
+margin:30px;
+padding:20px;
+background:#1b1b1b;
+border-radius:15px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+color:#aaa;
+}
+</style>
+
 </head>
-<body style="background:#111;color:white;font-family:Arial;text-align:center;padding:40px;">
+<body>
 
-<h1>🎮 Paper.io 2 Wiki Fan</h1>
+<header>🎮 Paper.io 2 Wiki Fan</header>
 
-<h2>🚧 Beta 0.1</h2>
+<nav>
+<button onclick="show('🏠 Home','Welcome to Paper.io 2 Wiki Beta 0.2!')">Home</button>
+<button onclick="show('👤 Skins','Coming Soon...')">Skins</button>
+<button onclick="show('🏆 Ranks','Coming Soon...')">Ranks</button>
+<button onclick="show('🌍 Countries','Coming Soon...')">Countries</button>
+<button onclick="show('🐛 Bugs','Coming Soon...')">Bugs</button>
+<button onclick="show('⚔️ Tips & Tricks','Coming Soon...')">Tips</button>
+<button onclick="show('📊 Statistics','Coming Soon...')">Statistics</button>
+<button onclick="show('ℹ️ About','Created by Kirill ❤️ with ChatGPT')">About</button>
+</nav>
 
-<p>Welcome to the unofficial Paper.io 2 Wiki!</p>
+<div id="content">
+<h2>🚀 Beta 0.2</h2>
+<p>Select a section from the menu.</p>
+</div>
 
-<hr>
+<footer>
+Created by Kirill ❤️ with ChatGPT
+</footer>
 
-<h3>📖 Sections</h3>
-
-<p>👤 Skins</p>
-<p>🏆 Ranks</p>
-<p>🗺️ Countries</p>
-<p>🐛 Bugs</p>
-<p>⚔️ Tips & Tricks</p>
-<p>📊 Statistics</p>
-
-<hr>
-
-<p>Created by Kirill ❤️ with ChatGPT</p>
+<script>
+function show(title,text){
+document.getElementById("content").innerHTML=
+"<h2>"+title+"</h2><p>"+text+"</p>";
+}
+</script>
 
 </body>
 </html>
