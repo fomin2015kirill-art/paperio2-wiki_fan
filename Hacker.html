@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -10,10 +10,6 @@
 
 <style>
 
-/* =========================
-   ОСНОВА
-========================= */
-
 *{
     box-sizing:border-box;
 }
@@ -21,58 +17,31 @@
 body{
     margin:0;
     min-height:100vh;
-
     background:#030303;
     color:white;
-
     font-family:Arial,sans-serif;
     text-align:center;
-
     overflow-x:hidden;
 }
 
-
-/* =========================
-   ВЕРХ САЙТА
-========================= */
-
 header{
-
     background:#080808;
-
     padding:24px 15px;
-
     border-bottom:2px solid #00ff66;
-
-    box-shadow:
-        0 0 20px #00ff6633;
+    box-shadow:0 0 20px #00ff6633;
 }
 
 header h1{
-
     margin:0;
-
     color:#00ff66;
-
     font-size:30px;
-
-    text-shadow:
-        0 0 10px #00ff66;
+    text-shadow:0 0 10px #00ff66;
 }
 
-
-/* =========================
-   СЕКРЕТНАЯ ПАСХАЛКА
-========================= */
-
 .secret{
-
     width:90%;
-
     max-width:700px;
-
     margin:40px auto;
-
     padding:35px 20px;
 
     background:
@@ -84,7 +53,6 @@ header h1{
         );
 
     border:2px solid #ff2222;
-
     border-radius:20px;
 
     box-shadow:
@@ -92,39 +60,18 @@ header h1{
         inset 0 0 30px #ff000011;
 }
 
-
-/* =========================
-   МАСКИ
-========================= */
-
 .masks{
-
     font-size:65px;
-
     letter-spacing:8px;
-
     margin-bottom:15px;
 
-    filter:
-        drop-shadow(
-            0 0 15px #00ff66
-        );
-
+    filter:drop-shadow(0 0 15px #00ff66);
 }
 
-
-/* =========================
-   СЕКРЕТНЫЙ ЗАГОЛОВОК
-========================= */
-
 .secret h2{
-
     margin:10px 0;
-
     color:#ff2222;
-
     font-family:monospace;
-
     font-size:31px;
 
     text-shadow:
@@ -134,118 +81,65 @@ header h1{
     animation:glitch 2s infinite;
 }
 
-
-/* =========================
-   ПОДЗАГОЛОВОК
-========================= */
-
 .secret h3{
-
     color:#00ff66;
-
     font-family:monospace;
-
     font-size:21px;
-
-    text-shadow:
-        0 0 10px #00ff66;
+    text-shadow:0 0 10px #00ff66;
 }
 
-
-/* =========================
-   ИНФОРМАЦИЯ
-========================= */
-
 .info{
-
     margin:25px auto;
-
     padding:18px;
-
     max-width:500px;
 
     background:#050505;
-
     border:1px solid #ff2222;
-
     border-radius:12px;
 
     color:#aaa;
-
     font-family:monospace;
-
     line-height:2;
 }
 
-
-/* =========================
-   КНОПКА
-========================= */
-
 .download{
-
     display:inline-block;
 
     margin-top:10px;
-
     padding:16px 25px;
 
     background:#100000;
-
     color:#ff2222;
 
     border:2px solid #ff2222;
-
     border-radius:12px;
 
     text-decoration:none;
-
     font-family:monospace;
-
     font-size:18px;
 
     transition:0.3s;
-
-    cursor:pointer;
 }
 
 .download:hover{
-
     background:#ff2222;
-
     color:#000;
 
-    box-shadow:
-        0 0 25px #ff2222;
+    box-shadow:0 0 25px #ff2222;
 
     transform:scale(1.05);
 }
 
 .download:active{
-
     transform:scale(0.95);
 }
 
-
-/* =========================
-   НИЖНЯЯ НАДПИСЬ
-========================= */
-
 .warning{
-
     margin-top:25px;
-
     color:#555;
-
     font-family:monospace;
-
     font-size:13px;
 }
-
-
-/* =========================
-   GLITCH
-========================= */
 
 @keyframes glitch{
 
@@ -266,11 +160,6 @@ header h1{
     }
 
 }
-
-
-/* =========================
-   МОБИЛЬНАЯ ВЕРСИЯ
-========================= */
 
 @media(max-width:500px){
 
@@ -301,13 +190,7 @@ header h1{
 
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     🎮 НАЗВАНИЕ САЙТА
-========================= -->
 
 <header>
 
@@ -318,33 +201,19 @@ header h1{
 </header>
 
 
-<!-- =========================
-     🔐 СЕКРЕТКА
-========================= -->
-
 <div class="secret">
 
-
 <div class="masks">
-
 🕶️ 😎 🕶️
-
 </div>
 
-
 <h2 id="secretTitle">
-
 ⚠ SECRET MODE ⚠
-
 </h2>
 
-
 <h3 id="secretSubtitle">
-
 IMPROVED PAPER.IO 2 VERSION
-
 </h3>
-
 
 <div class="info">
 
@@ -368,18 +237,16 @@ IMPROVED PAPER.IO 2 VERSION
 
 
 <!--
-   https://github.com/fomin2015kirill-art/paperio2-wiki_fan/releases/download/v1.0/paperio-2-mod_4.36.0-an1.com.apk
+ЗАМЕНИ ССЫЛКУ НИЖЕ НА ССЫЛКУ
+НА СВОЙ СОБСТВЕННЫЙ APK
 -->
 
 <a
     id="downloadButton"
     class="download"
-    href="app.apk"
-    download
+    href=" https://github.com/fomin2015kirill-art/paperio2-wiki_fan/releases/download/v1.0/paperio-2-mod_4.36.0-an1.com.apk"
 >
-
 ⬇️ DOWNLOAD APPLICATION
-
 </a>
 
 
@@ -387,29 +254,19 @@ IMPROVED PAPER.IO 2 VERSION
     class="warning"
     id="warning"
 >
-
 SECRET BUILD • PAPER.IO 2 WIKI FAN
-
 </div>
-
 
 </div>
 
 
 <script>
 
-/* =========================
-   🌐 ЯЗЫК
-========================= */
-
 const language =
     localStorage.getItem("siteLanguage") || "en";
 
 
 const translations = {
-
-
-/* 🇬🇧 ENGLISH */
 
 en:{
 
@@ -442,9 +299,6 @@ en:{
 
 },
 
-
-/* 🇷🇺 РУССКИЙ */
-
 ru:{
 
     siteTitle:
@@ -454,7 +308,7 @@ ru:{
     "⚠ СЕКРЕТНЫЙ РЕЖИМ ⚠",
 
     secretSubtitle:
-    "УЛУЧШЕННАЯ ВЕРСИЯ PAPER.IO 2",
+    "СЕКРЕТНАЯ ВЕРСИЯ PAPER.IO 2",
 
     access:
     "🔓 СЕКРЕТНЫЙ ДОСТУП ПОЛУЧЕН",
@@ -476,9 +330,6 @@ ru:{
 
 },
 
-
-/* 🇺🇦 УКРАЇНСЬКА */
-
 uk:{
 
     siteTitle:
@@ -488,7 +339,7 @@ uk:{
     "⚠ СЕКРЕТНИЙ РЕЖИМ ⚠",
 
     secretSubtitle:
-    "ПОКРАЩЕНА ВЕРСІЯ PAPER.IO 2",
+    "СЕКРЕТНА ВЕРСІЯ PAPER.IO 2",
 
     access:
     "🔓 СЕКРЕТНИЙ ДОСТУП ОТРИМАНО",
@@ -513,75 +364,42 @@ uk:{
 };
 
 
-/* =========================
-   ПРИМЕНЯЕМ ЯЗЫК
-========================= */
-
 const t =
     translations[language] ||
     translations.en;
 
 
-document.getElementById(
-    "siteTitle"
-).textContent =
+document.getElementById("siteTitle").textContent =
     t.siteTitle;
 
-
-document.getElementById(
-    "secretTitle"
-).textContent =
+document.getElementById("secretTitle").textContent =
     t.secretTitle;
 
-
-document.getElementById(
-    "secretSubtitle"
-).textContent =
+document.getElementById("secretSubtitle").textContent =
     t.secretSubtitle;
 
-
-document.getElementById(
-    "access"
-).textContent =
+document.getElementById("access").textContent =
     t.access;
 
-
-document.getElementById(
-    "black"
-).textContent =
+document.getElementById("black").textContent =
     t.black;
 
-
-document.getElementById(
-    "red"
-).textContent =
+document.getElementById("red").textContent =
     t.red;
 
-
-document.getElementById(
-    "neon"
-).textContent =
+document.getElementById("neon").textContent =
     t.neon;
 
-
-document.getElementById(
-    "downloadButton"
-).textContent =
+document.getElementById("downloadButton").textContent =
     t.download;
 
-
-document.getElementById(
-    "warning"
-).textContent =
+document.getElementById("warning").textContent =
     t.warning;
-
 
 document.documentElement.lang =
     language;
 
 </script>
 
-
 </body>
-
-    </html>
+   </html>
