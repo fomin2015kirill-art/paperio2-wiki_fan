@@ -87,6 +87,14 @@ header h1{
     margin-bottom:8px;
 }
 
+/* 🔥 ЗАЧЁРКИВАНИЕ */
+
+.achievement.completed .achievementName{
+    text-decoration:line-through;
+    text-decoration-thickness:2px;
+    opacity:0.65;
+}
+
 .stats{
     color:#aaa;
     font-size:14px;
@@ -102,13 +110,7 @@ header h1{
 }
 
 .achievement.completed{
-    background:#1d080d;
-    border-color:#ff0033;
-}
-
-.achievement.completed .achievementName{
-    text-decoration:line-through;
-    opacity:.7;
+    background:#18070b;
 }
 
 .back{
@@ -147,7 +149,6 @@ header h1{
 
 <div class="container">
 
-
 <p class="subtitle" id="subtitle">
 Impossible — 7 achievements
 </p>
@@ -155,7 +156,7 @@ Impossible — 7 achievements
 
 <!-- 1 -->
 
-<div class="achievement">
+<div class="achievement" id="card1">
 
 <input
 type="checkbox"
@@ -182,7 +183,7 @@ id="name1">
 
 <br>
 
-<span class="percent" id="percent1">
+<span class="percent">
 📊 2%
 </span>
 
@@ -195,7 +196,7 @@ id="name1">
 
 <!-- 2 -->
 
-<div class="achievement">
+<div class="achievement" id="card2">
 
 <input
 type="checkbox"
@@ -222,7 +223,7 @@ id="name2">
 
 <br>
 
-<span class="percent" id="percent2">
+<span class="percent">
 📊 1.5%
 </span>
 
@@ -235,7 +236,7 @@ id="name2">
 
 <!-- 3 -->
 
-<div class="achievement">
+<div class="achievement" id="card3">
 
 <input
 type="checkbox"
@@ -262,7 +263,7 @@ id="name3">
 
 <br>
 
-<span class="percent" id="percent3">
+<span class="percent">
 📊 1%
 </span>
 
@@ -275,7 +276,7 @@ id="name3">
 
 <!-- 4 -->
 
-<div class="achievement">
+<div class="achievement" id="card4">
 
 <input
 type="checkbox"
@@ -302,7 +303,7 @@ id="name4">
 
 <br>
 
-<span class="percent" id="percent4">
+<span class="percent">
 📊 0.5%
 </span>
 
@@ -315,7 +316,7 @@ id="name4">
 
 <!-- 5 -->
 
-<div class="achievement">
+<div class="achievement" id="card5">
 
 <input
 type="checkbox"
@@ -342,7 +343,7 @@ id="name5">
 
 <br>
 
-<span class="percent" id="percent5">
+<span class="percent">
 📊 0.8%
 </span>
 
@@ -355,7 +356,7 @@ id="name5">
 
 <!-- 6 -->
 
-<div class="achievement">
+<div class="achievement" id="card6">
 
 <input
 type="checkbox"
@@ -382,7 +383,7 @@ id="name6">
 
 <br>
 
-<span class="percent" id="percent6">
+<span class="percent">
 📊 1.2%
 </span>
 
@@ -395,7 +396,7 @@ id="name6">
 
 <!-- 7 -->
 
-<div class="achievement">
+<div class="achievement" id="card7">
 
 <input
 type="checkbox"
@@ -422,7 +423,7 @@ id="name7">
 
 <br>
 
-<span class="percent" id="percent7">
+<span class="percent">
 📊 0.3%
 </span>
 
@@ -442,12 +443,10 @@ id="back">
 
 </a>
 
-
 </div>
 
 
 <script>
-
 
 /* =========================
    🌐 ПЕРЕВОДЫ
@@ -456,132 +455,102 @@ id="back">
 const translations = {
 
 en:{
+    title:"💀 Impossible",
+    subtitle:"Impossible — 7 achievements",
 
-title:"💀 Impossible",
+    name1:"💀 Get 5,000 kills",
+    name2:"🌟 Reach Legend 1",
+    name3:"🎯 Get 16 kills in one game",
+    name4:"💯 Capture 100% of the map 200 times",
+    name5:"⬆️ Upgrade every character to level 10",
+    name6:"🏆 Win 5 games in a row",
+    name7:"🌍 Reach the World Top 10,000",
 
-subtitle:"Impossible — 7 achievements",
+    people1:"👥 4 players",
+    people2:"👥 3 players",
+    people3:"👥 2 players",
+    people4:"👥 1 player",
+    people5:"👥 2 players",
+    people6:"👥 2 players",
+    people7:"👥 1 player",
 
-name1:"💀 Get 5,000 kills",
-
-name2:"🌟 Reach Legend 1",
-
-name3:"🎯 Get 16 kills in one game",
-
-name4:"💯 Capture 100% of the map 200 times",
-
-name5:"⬆️ Upgrade every character to level 10",
-
-name6:"🏆 Win 5 games in a row",
-
-name7:"🌍 Reach the World Top 10,000",
-
-back:"🏆 Achievements",
-
-player:"player",
-players:"players"
-
+    back:"🏆 Achievements"
 },
 
 
 ru:{
+    title:"💀 Невозможно",
+    subtitle:"Невозможно — 7 достижений",
 
-title:"💀 Невозможно",
+    name1:"💀 Сделать 5 000 киллов",
+    name2:"🌟 Дойти до Легенды 1",
+    name3:"🎯 Сделать 16 киллов за одну игру",
+    name4:"💯 Захватить 100% карты 200 раз",
+    name5:"⬆️ Прокачать всех персонажей до 10 уровня",
+    name6:"🏆 Победить 5 раз подряд",
+    name7:"🌍 Попасть во всемирный ТОП-10 000",
 
-subtitle:"Невозможно — 7 достижений",
+    people1:"👥 4 игрока",
+    people2:"👥 3 игрока",
+    people3:"👥 2 игрока",
+    people4:"👥 1 игрок",
+    people5:"👥 2 игрока",
+    people6:"👥 2 игрока",
+    people7:"👥 1 игрок",
 
-name1:"💀 Сделать 5 000 киллов",
-
-name2:"🌟 Дойти до Легенды 1",
-
-name3:"🎯 Сделать 16 киллов за одну игру",
-
-name4:"💯 Захватить 100% карты 200 раз",
-
-name5:"⬆️ Прокачать всех персонажей до 10 уровня",
-
-name6:"🏆 Победить 5 раз подряд",
-
-name7:"🌍 Попасть во всемирный ТОП-10 000",
-
-back:"🏆 Достижения",
-
-player:"игрок",
-players:"игроков"
-
+    back:"🏆 Достижения"
 },
 
 
 uk:{
+    title:"💀 Неможливо",
+    subtitle:"Неможливо — 7 досягнень",
 
-title:"💀 Неможливо",
+    name1:"💀 Зробити 5 000 вбивств",
+    name2:"🌟 Дійти до Легенди 1",
+    name3:"🎯 Зробити 16 вбивств за одну гру",
+    name4:"💯 Захопити 100% карти 200 разів",
+    name5:"⬆️ Прокачати всіх персонажів до 10 рівня",
+    name6:"🏆 Перемогти 5 разів поспіль",
+    name7:"🌍 Потрапити у світовий ТОП-10 000",
 
-subtitle:"Неможливо — 7 досягнень",
+    people1:"👥 4 гравці",
+    people2:"👥 3 гравці",
+    people3:"👥 2 гравці",
+    people4:"👥 1 гравець",
+    people5:"👥 2 гравці",
+    people6:"👥 2 гравці",
+    people7:"👥 1 гравець",
 
-name1:"💀 Зробити 5 000 вбивств",
-
-name2:"🌟 Дійти до Легенди 1",
-
-name3:"🎯 Зробити 16 вбивств за одну гру",
-
-name4:"💯 Захопити 100% карти 200 разів",
-
-name5:"⬆️ Прокачати всіх персонажів до 10 рівня",
-
-name6:"🏆 Перемогти 5 разів поспіль",
-
-name7:"🌍 Потрапити у світовий ТОП-10 000",
-
-back:"🏆 Досягнення",
-
-player:"гравець",
-players:"гравців"
-
+    back:"🏆 Досягнення"
 }
 
 };
 
 
 /* =========================
-   📊 СТАТИСТИКА
-========================= */
-
-const stats = [
-
-[4,2],
-[3,1.5],
-[2,1],
-[1,0.5],
-[2,0.8],
-[2,1.2],
-[1,0.3]
-
-];
-
-
-/* =========================
-   🌐 ЯЗЫК
+   🌐 ПОЛУЧАЕМ ЯЗЫК
 ========================= */
 
 function getLanguage(){
 
-    const saved =
+    const language =
         localStorage.getItem("siteLanguage");
 
-    if(saved === "ru"){
+    if(language === "ru"){
         return "ru";
     }
 
-    if(saved === "uk"){
+    if(language === "uk"){
         return "uk";
     }
 
     return "en";
-
 }
 
 
 /* =========================
-   🌐 ПРИМЕНЕНИЕ ЯЗЫКА
+   🌐 ПРИМЕНЯЕМ ЯЗЫК
 ========================= */
 
 function applyLanguage(){
@@ -594,4 +563,180 @@ function applyLanguage(){
 
 
     document.getElementById("title")
-       
+        .textContent = t.title;
+
+
+    document.getElementById("subtitle")
+        .textContent = t.subtitle;
+
+
+    for(let i=1;i<=7;i++){
+
+        document.getElementById(
+            "name"+i
+        ).textContent =
+            t["name"+i];
+
+
+        document.getElementById(
+            "people"+i
+        ).textContent =
+            t["people"+i];
+
+    }
+
+
+    document.getElementById("back")
+        .textContent = t.back;
+
+
+    document.documentElement.lang =
+        language;
+
+}
+
+
+/* =========================
+   ☑️ СОХРАНЕНИЕ
+========================= */
+
+function saveAchievement(number){
+
+    const checkbox =
+        document.getElementById(
+            "achievement"+number
+        );
+
+    const card =
+        document.getElementById(
+            "card"+number
+        );
+
+
+    localStorage.setItem(
+
+        "impossibleAchievement"+number,
+
+        checkbox.checked ? "true" : "false"
+
+    );
+
+
+    if(checkbox.checked){
+
+        card.classList.add(
+            "completed"
+        );
+
+    }else{
+
+        card.classList.remove(
+            "completed"
+        );
+
+    }
+
+}
+
+
+/* =========================
+   ☑️ ЗАГРУЗКА
+========================= */
+
+function loadAchievements(){
+
+    for(let i=1;i<=7;i++){
+
+        const checkbox =
+            document.getElementById(
+                "achievement"+i
+            );
+
+        const card =
+            document.getElementById(
+                "card"+i
+            );
+
+
+        const saved =
+            localStorage.getItem(
+                "impossibleAchievement"+i
+            );
+
+
+        if(saved === "true"){
+
+            checkbox.checked = true;
+
+            card.classList.add(
+                "completed"
+            );
+
+        }else{
+
+            checkbox.checked = false;
+
+            card.classList.remove(
+                "completed"
+            );
+
+        }
+
+    }
+
+}
+
+
+/* =========================
+   🚀 ЗАПУСК
+========================= */
+
+applyLanguage();
+
+loadAchievements();
+
+
+/* Когда возвращаемся на страницу */
+
+window.addEventListener(
+    "pageshow",
+    function(){
+
+        applyLanguage();
+
+        loadAchievements();
+
+    }
+);
+
+
+/* =========================
+   🔄 ПРОВЕРКА ЯЗЫКА
+========================= */
+
+let lastLanguage =
+    getLanguage();
+
+
+setInterval(function(){
+
+    const currentLanguage =
+        getLanguage();
+
+
+    if(currentLanguage !== lastLanguage){
+
+        lastLanguage =
+            currentLanguage;
+
+        applyLanguage();
+
+    }
+
+},300);
+
+</script>
+
+</body>
+
+    </html>
