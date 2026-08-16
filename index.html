@@ -1,17 +1,19 @@
+
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
- <title>Paper.io 2 Wiki Fan</title>
+
+<title>Paper.io 2 Wiki Fan</title>
 
 <style>
 
 body{
     margin:0;
     font-family:Arial,sans-serif;
-    background:#111;
+    background:#050505;
     color:white;
     text-align:center;
 }
@@ -19,12 +21,13 @@ body{
 /* Шапка */
 
 header{
-    background:#1aff66;
-    padding:20px;
-    font-size:35px;
+    background:#080808;
+    padding:25px 15px;
+    font-size:32px;
     font-weight:bold;
-    color:#000;
-    box-shadow:0 0 20px #1aff66;
+    color:#00ff66;
+    border-bottom:2px solid #00ff66;
+    box-shadow:0 0 20px #00ff6633;
 }
 
 /* Меню */
@@ -33,26 +36,27 @@ nav{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:20px;
+    gap:15px;
     padding:30px 15px;
 }
 
 nav a{
-    background:#222;
-    color:white;
-    border:2px solid #1aff66;
+    background:#0b0b0b;
+    color:#00ff66;
+    border:2px solid #00ff66;
     padding:14px 22px;
     border-radius:14px;
     font-size:18px;
     text-decoration:none;
     transition:0.3s;
+    box-shadow:0 0 8px #00ff6618;
 }
 
 nav a:hover{
     transform:scale(1.08);
-    background:#1aff66;
-    color:black;
-    box-shadow:0 0 20px #1aff66;
+    background:#00ff66;
+    color:#000;
+    box-shadow:0 0 20px #00ff66;
 }
 
 /* Главная карточка */
@@ -60,15 +64,17 @@ nav a:hover{
 #content{
     margin:30px auto;
     padding:30px 20px;
-    background:#1b1b1b;
+    background:#0b0b0b;
+    border:1px solid #00ff66;
     border-radius:18px;
     max-width:700px;
-    box-shadow:0 0 15px #080808;
+    box-shadow:0 0 15px #00ff6618;
 }
 
 #content h2{
     font-size:30px;
     margin-bottom:20px;
+    color:#00ff66;
 }
 
 #content p{
@@ -83,12 +89,14 @@ nav a:hover{
     max-width:700px;
     margin:20px auto;
     padding:25px 20px;
-    background:#181818;
+    background:#0b0b0b;
+    border:1px solid #00ff66;
     border-radius:18px;
+    box-shadow:0 0 10px #00ff6618;
 }
 
 .info h2{
-    color:#1aff66;
+    color:#00ff66;
 }
 
 .info p{
@@ -101,7 +109,7 @@ nav a:hover{
 footer{
     margin-top:50px;
     padding:25px;
-    color:#aaa;
+    color:#888;
     font-size:16px;
 }
 
@@ -112,9 +120,8 @@ footer{
 <body>
 
 <header>
-🎮 Фан-сообщество Paper.io 2 Wiki
+🎮 Paper.io 2 Wiki Fan
 </header>
-
 
 <nav>
 
@@ -132,8 +139,9 @@ footer{
 
 <a href="about.html">ℹ️ О сайте</a>
 
-</nav>
+<a href="settings.html">⚙️ Настройки</a>
 
+</nav>
 
 <div id="content">
 
@@ -149,7 +157,6 @@ footer{
 </p>
 
 </div>
-
 
 <div class="info">
 
@@ -180,7 +187,6 @@ footer{
 </p>
 
 </div>
-
 
 <footer>
 
