@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SECRET MODE</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at center,
+    #180000 0%,
+    #070707 55%,
+    #000 100%);
+
+    color:#00ff66;
+    font-family:monospace;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    overflow:hidden;
+}
+
+/* Неоновая сетка */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(255,0,0,0.04) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255,0,0,0.04) 1px,
+        transparent 1px
+    );
+
+    background-size:30px 30px;
+    pointer-events:none;
+}
+
+/* Главная панель */
+
+.secret-box{
+    width:90%;
+    max-width:600px;
+
+    padding:35px 20px;
+
+    background:#080808;
+
+    border:2px solid #ff2222;
+    border-radius:18px;
+
+    box-shadow:
+        0 0 20px #ff000044,
+        inset 0 0 25px #ff000011;
+}
+
+/* Хакерские маски */
+
+.masks{
+    font-size:65px;
+    margin-bottom:15px;
+
+    filter:
+        drop-shadow(0 0 12px #00ff66);
+}
+
+/* Заголовок */
+
+h1{
+    color:#ff2222;
+    font-size:32px;
+
+    text-shadow:
+        0 0 10px red,
+        0 0 25px red;
+
+    margin:10px 0;
+}
+
+/* Подзаголовок */
+
+h2{
+    color:#00ff66;
+
+    font-size:23px;
+
+    text-shadow:
+        0 0 10px #00ff66;
+}
+
+/* Информация */
+
+.info{
+    margin:25px 0;
+
+    line-height:2;
+
+    color:#aaa;
+}
+
+/* Кнопка */
+
+.download{
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:16px 25px;
+
+    background:#100000;
+
+    border:2px solid #ff2222;
+    border-radius:10px;
+
+    color:#ff2222;
+
+    font-size:18px;
+    font-family:monospace;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.download:hover{
+    background:#ff2222;
+    color:#000;
+
+    box-shadow:
+        0 0 25px #ff2222;
+
+    transform:scale(1.05);
+}
+
+.download:active{
+    transform:scale(0.95);
+}
+
+/* Нижняя надпись */
+
+.warning{
+    margin-top:25px;
+    color:#555;
+    font-size:13px;
+}
+
+/* Glitch */
+
+.glitch{
+    animation:glitch 2s infinite;
+}
+
+@keyframes glitch{
+
+    0%,90%,100%{
+        transform:translateX(0);
+    }
+
+    92%{
+        transform:translateX(-3px);
+    }
+
+    94%{
+        transform:translateX(3px);
+    }
+
+    96%{
+        transform:translateX(-2px);
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="secret-box">
+
+    <div class="masks">
+        🕶️ 😎 🕶️
+    </div>
+
+    <h1 class="glitch" id="hackerTitle">
+        ⚠ SECRET MODE ⚠
+    </h1>
+
+    <h2 id="hackerSubtitle">
+        УЛУЧШЕННАЯ ВЕРСИЯ PAPER.IO 2
+    </h2>
+
+    <div class="info">
+
+        <div id="access">
+            🔓 СЕКРЕТНЫЙ ДОСТУП ПОЛУЧЕН
+        </div>
+
+        <div id="black">
+            🖤 ЧЁРНАЯ СИСТЕМА
+        </div>
+
+        <div id="red">
+            🔴 КРАСНЫЙ ДОСТУП
+        </div>
+
+        <div id="neon">
+            🟢 НЕОНОВЫЙ ПРОТОКОЛ
+        </div>
+
+    </div>
+
+
+    <!-- КНОПКА СКАЧИВАНИЯ -->
+
+    <a
+        class="download"
+        id="downloadButton"
+        href="app.apk"
+        download
+    >
+        ⬇️ СКАЧАТЬ ПРИЛОЖЕНИЕ
+    </a>
+
+
+    <div class="warning" id="warning">
+        SECRET BUILD • PAPER.IO 2 WIKI FAN
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   🌐 ЯЗЫК
+========================= */
+
+const language =
+    localStorage.getItem("siteLanguage") || "en";
+
+
+const hackerTranslations = {
+
+    en:{
+
+        title:"⚠ SECRET MODE ⚠",
+
+        subtitle:
+        "IMPROVED PAPER.IO 2 VERSION",
+
+        access:
+        "🔓 SECRET ACCESS GRANTED",
+
+        black:
+        "🖤 BLACK SYSTEM",
+
+        red:
+        "🔴 RED ACCESS",
+
+        neon:
+        "🟢 NEON PROTOCOL",
+
+        download:
+        "⬇️ DOWNLOAD APPLICATION",
+
+        warning:
+        "SECRET BUILD • PAPER.IO 2 WIKI FAN"
+    },
+
+
+    ru:{
+
+        title:
+        "⚠ СЕКРЕТНЫЙ РЕЖИМ ⚠",
+
+        subtitle:
+        "УЛУЧШЕННАЯ ВЕРСИЯ PAPER.IO 2",
+
+        access:
+        "🔓 СЕКРЕТНЫЙ ДОСТУП ПОЛУЧЕН",
+
+        black:
+        "🖤 ЧЁРНАЯ СИСТЕМА",
+
+        red:
+        "🔴 КРАСНЫЙ ДОСТУП",
+
+        neon:
+        "🟢 НЕОНОВЫЙ ПРОТОКОЛ",
+
+        download:
+        "⬇️ СКАЧАТЬ ПРИЛОЖЕНИЕ",
+
+        warning:
+        "СЕКРЕТНАЯ СБОРКА • PAPER.IO 2 WIKI FAN"
+    },
+
+
+    uk:{
+
+        title:
+        "⚠ СЕКРЕТНИЙ РЕЖИМ ⚠",
+
+        subtitle:
+        "ПОКРАЩЕНА ВЕРСІЯ PAPER.IO 2",
+
+        access:
+        "🔓 СЕКРЕТНИЙ ДОСТУП ОТРИМАНО",
+
+        black:
+        "🖤 ЧОРНА СИСТЕМА",
+
+        red:
+        "🔴 ЧЕРВОНИЙ ДОСТУП",
+
+        neon:
+        "🟢 НЕОНОВИЙ ПРОТОКОЛ",
+
+        download:
+        "⬇️ ЗАВАНТАЖИТИ ЗАСТОСУНОК",
+
+        warning:
+        "СЕКРЕТНА ЗБІРКА • PAPER.IO 2 WIKI FAN"
+    }
+
+};
+
+
+const t =
+    hackerTranslations[language] ||
+    hackerTranslations.en;
+
+
+/* Применяем язык */
+
+document.getElementById("hackerTitle").textContent =
+    t.title;
+
+document.getElementById("hackerSubtitle").textContent =
+    t.subtitle;
+
+document.getElementById("access").textContent =
+    t.access;
+
+document.getElementById("black").textContent =
+    t.black;
+
+document.getElementById("red").textContent =
+    t.red;
+
+document.getElementById("neon").textContent =
+    t.neon;
+
+document.getElementById("downloadButton").textContent =
+    t.download;
+
+document.getElementById("warning").textContent =
+    t.warning;
+
+document.documentElement.lang =
+    language;
+
+</script>
+
+</body>
+  </html>
