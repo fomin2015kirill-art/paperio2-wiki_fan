@@ -1,133 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Paper.io 2 Wiki Fan</title>
 
+
 <style>
 
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#050505;
-    color:white;
-    text-align:center;
-    transition:0.3s;
-}
-
 /* =========================
-   🔴 СЕКРЕТНАЯ АНИМАЦИЯ
+   ОСНОВА
 ========================= */
 
-body.secret-transition{
-    animation:redHack 1.8s forwards;
-}
+body{
 
-@keyframes redHack{
+    margin:0;
 
-    0%{
-        background:#050505;
-        filter:none;
-    }
+    font-family:Arial,sans-serif;
 
-    20%{
-        background:#180000;
-        filter:sepia(.5) saturate(2);
-    }
+    background:#050505;
 
-    40%{
-        background:#300000;
-        filter:sepia(.8) saturate(4);
-    }
+    color:white;
 
-    60%{
-        background:#500000;
-        filter:sepia(1) saturate(7);
-    }
+    text-align:center;
 
-    80%{
-        background:#220000;
-        filter:brightness(.5) sepia(1) saturate(10);
-    }
-
-    100%{
-        background:#000000;
-        filter:brightness(.2) sepia(1) saturate(10);
-    }
 }
 
 
 /* =========================
-   🎮 HEADER
+   HEADER
 ========================= */
 
 header{
+
     background:#080808;
+
     padding:25px 15px;
+
     border-bottom:2px solid #00ff66;
+
     box-shadow:0 0 20px #00ff6633;
+
 }
 
 
 /* Название сайта */
 
 #siteTitle{
+
     margin:0;
+
     color:#00ff66;
+
     font-size:32px;
+
     text-shadow:0 0 10px #00ff66;
 
     cursor:pointer;
 
     user-select:none;
 
-    transition:.2s;
-}
+    transition:0.2s;
 
-
-/* Анимация названия при секретном клике */
-
-#siteTitle.secret-click{
-    animation:titleSecret .35s;
-}
-
-@keyframes titleSecret{
-
-    0%{
-        transform:scale(1);
-    }
-
-    50%{
-        transform:scale(.92);
-        color:#ff2222;
-        text-shadow:
-            0 0 10px #ff0000,
-            0 0 25px #ff0000;
-    }
-
-    100%{
-        transform:scale(1);
-    }
 }
 
 
 /* =========================
-   🧭 NAVIGATION
+   АНИМАЦИЯ КЛИКА
+========================= */
+
+#siteTitle.secret-click{
+
+    animation:titleClick 0.35s;
+
+}
+
+
+@keyframes titleClick{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(0.92);
+
+        color:#ff2222;
+
+        text-shadow:
+
+        0 0 10px #ff0000,
+
+        0 0 25px #ff0000;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* =========================
+   🔴 СЕКРЕТНАЯ АНИМАЦИЯ
+========================= */
+
+body.secret-transition{
+
+    animation:redHack 1.8s forwards;
+
+}
+
+
+@keyframes redHack{
+
+    0%{
+
+        background:#050505;
+
+        filter:none;
+
+    }
+
+    20%{
+
+        background:#180000;
+
+        filter:sepia(0.5) saturate(2);
+
+    }
+
+    40%{
+
+        background:#300000;
+
+        filter:sepia(0.8) saturate(4);
+
+    }
+
+    60%{
+
+        background:#500000;
+
+        filter:sepia(1) saturate(7);
+
+    }
+
+    80%{
+
+        background:#220000;
+
+        filter:brightness(0.5) sepia(1) saturate(10);
+
+    }
+
+    100%{
+
+        background:#000000;
+
+        filter:brightness(0.2) sepia(1) saturate(10);
+
+    }
+
+}
+
+
+/* =========================
+   НАВИГАЦИЯ
 ========================= */
 
 nav{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:15px;
+
     padding:30px 15px;
+
 }
 
+
 nav a{
+
     background:#0b0b0b;
+
     color:#00ff66;
+
     border:2px solid #00ff66;
 
     padding:14px 22px;
@@ -138,10 +211,13 @@ nav a{
 
     text-decoration:none;
 
-    transition:.3s;
+    transition:0.3s;
+
 }
 
+
 nav a:hover{
+
     transform:scale(1.08);
 
     background:#00ff66;
@@ -149,14 +225,16 @@ nav a:hover{
     color:#000;
 
     box-shadow:0 0 20px #00ff66;
+
 }
 
 
 /* =========================
-   📦 CONTENT
+   CONTENT
 ========================= */
 
 #content{
+
     margin:30px auto;
 
     padding:30px 20px;
@@ -170,30 +248,38 @@ nav a:hover{
     max-width:700px;
 
     box-shadow:0 0 15px #00ff6618;
+
 }
 
+
 #content h2{
+
     color:#00ff66;
 
     font-size:30px;
 
     margin-bottom:20px;
+
 }
 
+
 #content p{
+
     font-size:18px;
 
     color:#ddd;
 
     line-height:1.6;
+
 }
 
 
 /* =========================
-   📚 INFO
+   INFO
 ========================= */
 
 .info{
+
     max-width:700px;
 
     margin:20px auto;
@@ -205,24 +291,32 @@ nav a:hover{
     border:1px solid #00ff66;
 
     border-radius:18px;
+
 }
+
 
 .info h2{
+
     color:#00ff66;
+
 }
 
+
 .info p{
+
     color:#ccc;
 
     line-height:1.6;
+
 }
 
 
 /* =========================
-   👣 FOOTER
+   FOOTER
 ========================= */
 
 footer{
+
     margin-top:50px;
 
     padding:25px;
@@ -230,122 +324,212 @@ footer{
     color:#888;
 
     font-size:16px;
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
-<h1 id="siteTitle" onclick="secretClick()">
+<h1 id="siteTitle"
+onclick="secretClick()">
+
 🎮 Paper.io 2 Wiki Fan
+
 </h1>
 
 </header>
 
 
+<!-- =========================
+     MENU
+========================= -->
+
 <nav>
 
-<a href="skins.html" id="skins">
+<a href="skins.html"
+id="skins">
+
 👤 Skins
+
 </a>
 
-<a href="ranks.html" id="ranks">
+
+<a href="ranks.html"
+id="ranks">
+
 🏆 Ranks
+
 </a>
 
-<a href="countries.html" id="countries">
+
+<a href="countries.html"
+id="countries">
+
 🌍 Countries
+
 </a>
 
-<a href="bugs.html" id="bugs">
+
+<a href="bugs.html"
+id="bugs">
+
 🐛 Bugs
+
 </a>
 
-<a href="tips.html" id="tips">
+
+<a href="tips.html"
+id="tips">
+
 ⚔️ Tips
+
 </a>
 
-<a href="statistics.html" id="statistics">
+
+<a href="statistics.html"
+id="statistics">
+
 📊 Statistics
+
 </a>
 
-<a href="about.html" id="about">
+
+<a href="about.html"
+id="about">
+
 ℹ️ About
+
 </a>
 
-<a href="settings.html" id="settings">
+
+<a href="settings.html"
+id="settings">
+
 ⚙️ Settings
+
 </a>
 
 </nav>
 
 
+<!-- =========================
+     WELCOME
+========================= -->
+
 <div id="content">
 
 <h2 id="welcome">
+
 🚀 Welcome!
+
 </h2>
 
+
 <p id="description">
+
 This is a fan-made Wiki about Paper.io 2.
+
 </p>
 
+
 <p id="description2">
+
 Here you can find ranks, skins, countries,
 bugs, tips and game statistics.
+
 </p>
 
 </div>
 
+
+<!-- =========================
+     SECTIONS
+========================= -->
 
 <div class="info">
 
 <h2 id="sections">
+
 📚 Wiki Sections
+
 </h2>
 
+
 <p id="skinsInfo">
+
 👤 Skins — information about skins and characters.
+
 </p>
+
 
 <p id="ranksInfo">
+
 🏆 Ranks — rank system and world league.
+
 </p>
+
 
 <p id="countriesInfo">
+
 🌍 Countries — list of all available countries.
+
 </p>
+
 
 <p id="bugsInfo">
+
 🐛 Bugs — discovered bugs and unusual situations.
+
 </p>
+
 
 <p id="tipsInfo">
+
 ⚔️ Tips — useful ways to improve your gameplay.
+
 </p>
 
+
 <p id="statisticsInfo">
+
 📊 Statistics — achievements and player statistics.
+
 </p>
 
 </div>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
 <span id="created">
+
 Created by Kirill ❤️ with ChatGPT
+
 </span>
+
 
 <br><br>
 
+
 <span id="version">
+
 Paper.io 2 Wiki Fan — Beta 0.2
+
 </span>
 
 </footer>
@@ -353,23 +537,32 @@ Paper.io 2 Wiki Fan — Beta 0.2
 
 <script>
 
+
 /* =========================
    🌐 ПЕРЕВОДЫ
 ========================= */
 
 const translations = {
 
+
 en:{
 
 siteTitle:"🎮 Paper.io 2 Wiki Fan",
 
 skins:"👤 Skins",
+
 ranks:"🏆 Ranks",
+
 countries:"🌍 Countries",
+
 bugs:"🐛 Bugs",
+
 tips:"⚔️ Tips",
+
 statistics:"📊 Statistics",
+
 about:"ℹ️ About",
+
 settings:"⚙️ Settings",
 
 welcome:"🚀 Welcome!",
@@ -409,17 +602,25 @@ version:
 },
 
 
+
 ru:{
 
 siteTitle:"🎮 Фанатская Wiki Paper.io 2",
 
 skins:"👤 Скины",
+
 ranks:"🏆 Ранги",
+
 countries:"🌍 Страны",
+
 bugs:"🐛 Ошибки",
+
 tips:"⚔️ Советы",
+
 statistics:"📊 Статистика",
+
 about:"ℹ️ О сайте",
+
 settings:"⚙️ Настройки",
 
 welcome:"🚀 Добро пожаловать!",
@@ -459,17 +660,25 @@ version:
 },
 
 
+
 uk:{
 
 siteTitle:"🎮 Фанатська Wiki Paper.io 2",
 
 skins:"👤 Скіни",
+
 ranks:"🏆 Ранги",
+
 countries:"🌍 Країни",
+
 bugs:"🐛 Помилки",
+
 tips:"⚔️ Поради",
+
 statistics:"📊 Статистика",
+
 about:"ℹ️ Про сайт",
+
 settings:"⚙️ Налаштування",
 
 welcome:"🚀 Ласкаво просимо!",
@@ -592,7 +801,7 @@ language;
 
 
 /* =========================
-   🌐 ЯЗЫК ПО УМОЛЧАНИЮ
+   🌐 ЗАГРУЗКА ЯЗЫКА
 ========================= */
 
 let language =
@@ -601,7 +810,7 @@ localStorage.getItem("siteLanguage");
 
 if(!language){
 
-language = "en";
+language="en";
 
 localStorage.setItem(
 "siteLanguage",
@@ -618,19 +827,6 @@ applyLanguage(language);
    🔐 СЕКРЕТКА
 ========================= */
 
-/*
-
-Секрет:
-
-Нужно нажать на название
-"🎮 Paper.io 2 Wiki Fan"
-3 раза быстро.
-
-После третьего клика
-открывается Hacker.html.
-
-*/
-
 let secretClicks = 0;
 
 let secretTimer = null;
@@ -641,35 +837,32 @@ function secretClick(){
 secretClicks++;
 
 
-/* Анимация названия */
+/* Получаем заголовок */
 
 const title =
 document.getElementById("siteTitle");
 
 
+/* Запускаем анимацию */
+
 title.classList.remove(
 "secret-click"
 );
 
-
-/* Перезапуск CSS-анимации */
-
 void title.offsetWidth;
-
 
 title.classList.add(
 "secret-click"
 );
 
 
-/* Сбрасываем старый таймер */
+/* Сбрасываем таймер */
 
 clearTimeout(secretTimer);
 
 
-/* Если следующий клик
-   не произошёл быстро —
-   начинаем заново */
+/* Если долго не нажимать —
+   начинаем считать заново */
 
 secretTimer = setTimeout(function(){
 
@@ -679,7 +872,7 @@ secretClicks = 0;
 
 
 /* =========================
-   🔥 ТРИ КЛИКА
+   🔥 ТРИ БЫСТРЫХ КЛИКА
 ========================= */
 
 if(secretClicks === 3){
@@ -694,7 +887,7 @@ document.body.classList.add(
 );
 
 
-/* Открываем секретную страницу */
+/* Переход в секретку */
 
 setTimeout(function(){
 
@@ -707,9 +900,77 @@ window.location.href =
 
 }
 
+
+/* =========================
+   🔄 ИСПРАВЛЕНИЕ БАГА
+========================= */
+
+/*
+
+Когда возвращаемся назад
+из Hacker.html, браузер может
+восстановить старую страницу.
+
+Поэтому здесь принудительно
+сбрасываем абсолютно всё.
+
+*/
+
+window.addEventListener(
+"pageshow",
+function(){
+
+/* Убираем красную анимацию */
+
+document.body.classList.remove(
+"secret-transition"
+);
+
+
+/* Возвращаем нормальный фон */
+
+document.body.style.background =
+"#050505";
+
+
+/* Убираем фильтр */
+
+document.body.style.filter =
+"none";
+
+
+/* Возвращаем заголовок */
+
+const title =
+document.getElementById("siteTitle");
+
+
+if(title){
+
+title.classList.remove(
+"secret-click"
+);
+
+}
+
+
+/* Сбрасываем счётчик */
+
+secretClicks = 0;
+
+
+/* Удаляем старый таймер */
+
+clearTimeout(secretTimer);
+
+});
+
+
 </script>
 
+
 </body>
+
     </html>
 
 
