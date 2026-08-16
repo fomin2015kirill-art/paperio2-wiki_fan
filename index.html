@@ -17,11 +17,17 @@ content="width=device-width, initial-scale=1.0">
 ========================= */
 
 body{
+
     margin:0;
+
     font-family:Arial,sans-serif;
+
     background:#050505;
+
     color:white;
+
     text-align:center;
+
 }
 
 
@@ -30,47 +36,76 @@ body{
 ========================= */
 
 header{
+
     background:#080808;
+
     padding:25px 15px;
+
     border-bottom:2px solid #00ff66;
-    box-shadow:0 0 20px #00ff6633;
+
+    box-shadow:
+    0 0 20px #00ff6633;
+
 }
 
+
 #siteTitle{
+
     margin:0;
+
     color:#00ff66;
+
     font-size:32px;
-    text-shadow:0 0 10px #00ff66;
+
+    text-shadow:
+    0 0 10px #00ff66;
+
     cursor:pointer;
+
     user-select:none;
+
+    -webkit-user-select:none;
+
     transition:0.2s;
+
 }
 
 
 /* =========================
-   АНИМАЦИЯ СЕКРЕТКИ
+   АНИМАЦИЯ ЗАГОЛОВКА
 ========================= */
 
 #siteTitle.secret-click{
+
     animation:titleClick 0.35s;
+
 }
+
 
 @keyframes titleClick{
 
     0%{
+
         transform:scale(1);
+
     }
 
     50%{
+
         transform:scale(0.92);
+
         color:#ff2222;
+
         text-shadow:
         0 0 10px #ff0000,
         0 0 25px #ff0000;
+
     }
 
     100%{
+
         transform:scale(1);
+
     }
 
 }
@@ -81,39 +116,72 @@ header{
 ========================= */
 
 body.secret-transition{
+
     animation:redHack 1.8s forwards;
+
 }
+
 
 @keyframes redHack{
 
     0%{
+
         background:#050505;
+
         filter:none;
+
     }
 
     20%{
+
         background:#180000;
-        filter:sepia(0.5) saturate(2);
+
+        filter:
+        sepia(0.5)
+        saturate(2);
+
     }
 
     40%{
+
         background:#300000;
-        filter:sepia(0.8) saturate(4);
+
+        filter:
+        sepia(0.8)
+        saturate(4);
+
     }
 
     60%{
+
         background:#500000;
-        filter:sepia(1) saturate(7);
+
+        filter:
+        sepia(1)
+        saturate(7);
+
     }
 
     80%{
+
         background:#220000;
-        filter:brightness(0.5) sepia(1) saturate(10);
+
+        filter:
+        brightness(0.5)
+        sepia(1)
+        saturate(10);
+
     }
 
     100%{
+
         background:#000000;
-        filter:brightness(0.2) sepia(1) saturate(10);
+
+        filter:
+        brightness(0.2)
+        sepia(1)
+        saturate(10);
+
     }
 
 }
@@ -124,34 +192,57 @@ body.secret-transition{
 ========================= */
 
 nav{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:15px;
+
     padding:30px 15px;
+
 }
+
 
 nav a{
+
     background:#0b0b0b;
+
     color:#00ff66;
+
     border:2px solid #00ff66;
+
     padding:14px 22px;
+
     border-radius:14px;
+
     font-size:18px;
+
     text-decoration:none;
+
     transition:0.3s;
+
 }
 
+
 nav a:hover{
+
     transform:scale(1.08);
+
     background:#00ff66;
+
     color:#000;
-    box-shadow:0 0 20px #00ff66;
+
+    box-shadow:
+    0 0 20px #00ff66;
+
 }
 
 
 /* =========================
-   🏆 ТРОФЕЙ
+   🏆 ДОСТИЖЕНИЯ
 ========================= */
 
 #achievementButton{
@@ -159,9 +250,11 @@ nav a:hover{
     position:fixed;
 
     right:18px;
+
     bottom:18px;
 
     width:70px;
+
     height:70px;
 
     background:#0b0b0b;
@@ -185,9 +278,22 @@ nav a:hover{
     box-shadow:
     0 0 12px #00ff6644;
 
-    transition:0.25s;
+    cursor:pointer;
+
+    padding:0;
+
+    touch-action:none;
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+    -webkit-tap-highlight-color:transparent;
+
+    transition:0.2s;
 
 }
+
 
 #achievementButton:hover{
 
@@ -200,6 +306,14 @@ nav a:hover{
 
 }
 
+
+#achievementButton:active{
+
+    transform:scale(0.92);
+
+}
+
+
 #achievementIcon{
 
     font-size:28px;
@@ -207,6 +321,7 @@ nav a:hover{
     line-height:30px;
 
 }
+
 
 #achievementText{
 
@@ -219,6 +334,7 @@ nav a:hover{
     margin-top:2px;
 
 }
+
 
 #achievementButton:hover
 #achievementText{
@@ -246,9 +362,11 @@ nav a:hover{
 
     max-width:700px;
 
-    box-shadow:0 0 15px #00ff6618;
+    box-shadow:
+    0 0 15px #00ff6618;
 
 }
+
 
 #content h2{
 
@@ -259,6 +377,7 @@ nav a:hover{
     margin-bottom:20px;
 
 }
+
 
 #content p{
 
@@ -291,13 +410,20 @@ nav a:hover{
 
 }
 
+
 .info h2{
+
     color:#00ff66;
+
 }
 
+
 .info p{
+
     color:#ccc;
+
     line-height:1.6;
+
 }
 
 
@@ -355,12 +481,14 @@ id="skins">
 
 </a>
 
+
 <a href="ranks.html"
 id="ranks">
 
 🏆 Ranks
 
 </a>
+
 
 <a href="countries.html"
 id="countries">
@@ -369,12 +497,14 @@ id="countries">
 
 </a>
 
+
 <a href="bugs.html"
 id="bugs">
 
 🐛 Bugs
 
 </a>
+
 
 <a href="tips.html"
 id="tips">
@@ -383,6 +513,7 @@ id="tips">
 
 </a>
 
+
 <a href="statistics.html"
 id="statistics">
 
@@ -390,12 +521,14 @@ id="statistics">
 
 </a>
 
+
 <a href="about.html"
 id="about">
 
 ℹ️ About
 
 </a>
+
 
 <a href="settings.html"
 id="settings">
@@ -411,19 +544,23 @@ id="settings">
      🏆 ДОСТИЖЕНИЯ
 ========================= -->
 
-<a
-href="achievements.html"
-id="achievementButton">
+<button
+id="achievementButton"
+type="button">
 
 <span id="achievementIcon">
+
 🏆
+
 </span>
 
 <span id="achievementText">
+
 Achievements
+
 </span>
 
-</a>
+</button>
 
 
 <!-- =========================
@@ -438,11 +575,13 @@ Achievements
 
 </h2>
 
+
 <p id="description">
 
 This is a fan-made Wiki about Paper.io 2.
 
 </p>
+
 
 <p id="description2">
 
@@ -466,11 +605,13 @@ bugs, tips and game statistics.
 
 </h2>
 
+
 <p id="skinsInfo">
 
 👤 Skins — information about skins and characters.
 
 </p>
+
 
 <p id="ranksInfo">
 
@@ -478,11 +619,13 @@ bugs, tips and game statistics.
 
 </p>
 
+
 <p id="countriesInfo">
 
 🌍 Countries — list of all available countries.
 
 </p>
+
 
 <p id="bugsInfo">
 
@@ -490,11 +633,13 @@ bugs, tips and game statistics.
 
 </p>
 
+
 <p id="tipsInfo">
 
 ⚔️ Tips — useful ways to improve your gameplay.
 
 </p>
+
 
 <p id="statisticsInfo">
 
@@ -517,7 +662,9 @@ Created by Kirill ❤️ with ChatGPT
 
 </span>
 
+
 <br><br>
+
 
 <span id="version">
 
@@ -542,12 +689,19 @@ en:{
 siteTitle:"🎮 Paper.io 2 Wiki Fan",
 
 skins:"👤 Skins",
+
 ranks:"🏆 Ranks",
+
 countries:"🌍 Countries",
+
 bugs:"🐛 Bugs",
+
 tips:"⚔️ Tips",
+
 statistics:"📊 Statistics",
+
 about:"ℹ️ About",
+
 settings:"⚙️ Settings",
 
 achievement:"Achievements",
@@ -594,12 +748,19 @@ ru:{
 siteTitle:"🎮 Фанатская Wiki Paper.io 2",
 
 skins:"👤 Скины",
+
 ranks:"🏆 Ранги",
+
 countries:"🌍 Страны",
+
 bugs:"🐛 Ошибки",
+
 tips:"⚔️ Советы",
+
 statistics:"📊 Статистика",
+
 about:"ℹ️ О сайте",
+
 settings:"⚙️ Настройки",
 
 achievement:"Достижения",
@@ -646,12 +807,19 @@ uk:{
 siteTitle:"🎮 Фанатська Wiki Paper.io 2",
 
 skins:"👤 Скіни",
+
 ranks:"🏆 Ранги",
+
 countries:"🌍 Країни",
+
 bugs:"🐛 Помилки",
+
 tips:"⚔️ Поради",
+
 statistics:"📊 Статистика",
+
 about:"ℹ️ Про сайт",
+
 settings:"⚙️ Налаштування",
 
 achievement:"Досягнення",
@@ -706,77 +874,115 @@ translations[language] ||
 translations.en;
 
 
-document.getElementById("siteTitle").textContent =
+document.getElementById("siteTitle")
+.textContent =
 t.siteTitle;
 
-document.getElementById("skins").textContent =
+
+document.getElementById("skins")
+.textContent =
 t.skins;
 
-document.getElementById("ranks").textContent =
+
+document.getElementById("ranks")
+.textContent =
 t.ranks;
 
-document.getElementById("countries").textContent =
+
+document.getElementById("countries")
+.textContent =
 t.countries;
 
-document.getElementById("bugs").textContent =
+
+document.getElementById("bugs")
+.textContent =
 t.bugs;
 
-document.getElementById("tips").textContent =
+
+document.getElementById("tips")
+.textContent =
 t.tips;
 
-document.getElementById("statistics").textContent =
+
+document.getElementById("statistics")
+.textContent =
 t.statistics;
 
-document.getElementById("about").textContent =
+
+document.getElementById("about")
+.textContent =
 t.about;
 
-document.getElementById("settings").textContent =
+
+document.getElementById("settings")
+.textContent =
 t.settings;
 
 
-/* 🏆 Перевод трофея */
-
-document.getElementById(
-"achievementText"
-).textContent =
+document.getElementById("achievementText")
+.textContent =
 t.achievement;
 
 
-document.getElementById("welcome").textContent =
+document.getElementById("welcome")
+.textContent =
 t.welcome;
 
-document.getElementById("description").textContent =
+
+document.getElementById("description")
+.textContent =
 t.description;
 
-document.getElementById("description2").textContent =
+
+document.getElementById("description2")
+.textContent =
 t.description2;
 
-document.getElementById("sections").textContent =
+
+document.getElementById("sections")
+.textContent =
 t.sections;
 
-document.getElementById("skinsInfo").textContent =
+
+document.getElementById("skinsInfo")
+.textContent =
 t.skinsInfo;
 
-document.getElementById("ranksInfo").textContent =
+
+document.getElementById("ranksInfo")
+.textContent =
 t.ranksInfo;
 
-document.getElementById("countriesInfo").textContent =
+
+document.getElementById("countriesInfo")
+.textContent =
 t.countriesInfo;
 
-document.getElementById("bugsInfo").textContent =
+
+document.getElementById("bugsInfo")
+.textContent =
 t.bugsInfo;
 
-document.getElementById("tipsInfo").textContent =
+
+document.getElementById("tipsInfo")
+.textContent =
 t.tipsInfo;
 
-document.getElementById("statisticsInfo").textContent =
+
+document.getElementById("statisticsInfo")
+.textContent =
 t.statisticsInfo;
 
-document.getElementById("created").textContent =
+
+document.getElementById("created")
+.textContent =
 t.created;
 
-document.getElementById("version").textContent =
+
+document.getElementById("version")
+.textContent =
 t.version;
+
 
 document.documentElement.lang =
 language;
@@ -792,9 +998,13 @@ let language =
 localStorage.getItem("siteLanguage");
 
 
-if(!language){
+if(
+language !== "en" &&
+language !== "ru" &&
+language !== "uk"
+){
 
-language="en";
+language = "en";
 
 localStorage.setItem(
 "siteLanguage",
@@ -808,7 +1018,7 @@ applyLanguage(language);
 
 
 /* =========================
-   🔐 СЕКРЕТКА
+   🔐 СЕКРЕТКА ЗАГОЛОВКА
 ========================= */
 
 let secretClicks = 0;
@@ -829,7 +1039,9 @@ title.classList.remove(
 "secret-click"
 );
 
+
 void title.offsetWidth;
+
 
 title.classList.add(
 "secret-click"
@@ -850,6 +1062,7 @@ if(secretClicks === 3){
 
 secretClicks = 0;
 
+
 document.body.classList.add(
 "secret-transition"
 );
@@ -868,7 +1081,128 @@ window.location.href =
 
 
 /* =========================
-   🔄 ИСПРАВЛЕНИЕ БАГА
+   🔐 СЕКРЕТКА КНОПКИ
+   🏆 ЗАЖАТЬ = ADMIN
+========================= */
+
+const achievementButton =
+document.getElementById(
+"achievementButton"
+);
+
+
+let holdTimer = null;
+
+let isHolding = false;
+
+let secretOpened = false;
+
+
+/* =========================
+   👆 НАЧАЛО НАЖАТИЯ
+========================= */
+
+achievementButton.addEventListener(
+"pointerdown",
+function(event){
+
+event.preventDefault();
+
+isHolding = true;
+
+secretOpened = false;
+
+
+holdTimer = setTimeout(function(){
+
+if(isHolding){
+
+secretOpened = true;
+
+
+window.location.href =
+"admin.html";
+
+}
+
+},1500);
+
+}
+);
+
+
+/* =========================
+   👆 ОТПУСКАНИЕ
+========================= */
+
+achievementButton.addEventListener(
+"pointerup",
+function(event){
+
+event.preventDefault();
+
+
+isHolding = false;
+
+
+clearTimeout(
+holdTimer
+);
+
+
+if(!secretOpened){
+
+window.location.href =
+"achievements.html";
+
+}
+
+}
+);
+
+
+/* =========================
+   🛑 ОТМЕНА
+========================= */
+
+achievementButton.addEventListener(
+"pointercancel",
+function(){
+
+isHolding = false;
+
+clearTimeout(
+holdTimer
+);
+
+}
+);
+
+
+/* =========================
+   🖱️ ЕСЛИ КУРСОР УШЁЛ
+========================= */
+
+achievementButton.addEventListener(
+"pointerleave",
+function(){
+
+if(isHolding){
+
+isHolding = false;
+
+clearTimeout(
+holdTimer
+);
+
+}
+
+}
+);
+
+
+/* =========================
+   🔄 PAGESHOW
 ========================= */
 
 window.addEventListener(
