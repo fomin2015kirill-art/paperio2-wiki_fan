@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Normal Achievements — Paper.io 2 Wiki Fan</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#050505;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:#080808;
+    padding:25px 15px;
+    border-bottom:2px solid #00aaff;
+    box-shadow:0 0 20px #00aaff33;
+}
+
+header h1{
+    margin:0;
+    color:#00aaff;
+    font-size:30px;
+    text-shadow:0 0 10px #00aaff;
+}
+
+.container{
+    max-width:750px;
+    margin:25px auto;
+    padding:20px;
+}
+
+.subtitle{
+    color:#ccc;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.achievement{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#0b0b0b;
+    border:1px solid #00aaff;
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:15px;
+    text-align:left;
+    box-shadow:0 0 10px #00aaff18;
+    transition:.2s;
+}
+
+.achievement:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 18px #00aaff44;
+}
+
+.check{
+    width:28px;
+    height:28px;
+    accent-color:#00aaff;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.achievementInfo{
+    flex:1;
+}
+
+.achievementName{
+    color:#00aaff;
+    font-size:19px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.stats{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.people{
+    color:#00ccff;
+}
+
+.percent{
+    color:#ffaa00;
+}
+
+.achievement.completed{
+    border-color:#00aaff;
+    background:#06151f;
+}
+
+.achievement.completed .achievementName{
+    text-decoration:line-through;
+    opacity:.7;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 22px;
+    background:#00aaff;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+.back:hover{
+    box-shadow:0 0 18px #00aaff;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<h1 id="title">
+🏆 Normal Achievements
+</h1>
+
+</header>
+
+
+<div class="container">
+
+<p class="subtitle" id="subtitle">
+Normal level — 5 achievements
+</p>
+
+
+<!-- 1 -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement1"
+onchange="saveAchievement(1)"
+>
+
+<div class="achievementInfo">
+
+<div class="achievementName" id="name1">
+👤 Get all regular characters
+</div>
+
+<div class="stats">
+
+<span class="people" id="people1">
+👥 86 players
+</span>
+
+<br>
+
+<span class="percent" id="percent1">
+📊 43%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement2"
+onchange="saveAchievement(2)"
+>
+
+<div class="achievementInfo">
+
+<div class="achievementName" id="name2">
+⬆️ Upgrade one character to level 5
+</div>
+
+<div class="stats">
+
+<span class="people" id="people2">
+👥 72 players
+</span>
+
+<br>
+
+<span class="percent" id="percent2">
+📊 36%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement3"
+onchange="saveAchievement(3)"
+>
+
+<div class="achievementInfo">
+
+<div class="achievementName" id="name3">
+💎 Reach Diamond 2
+</div>
+
+<div class="stats">
+
+<span class="people" id="people3">
+👥 54 players
+</span>
+
+<br>
+
+<span class="percent" id="percent3">
+📊 27%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement4"
+onchange="saveAchievement(4)"
+>
+
+<div class="achievementInfo">
+
+<div class="achievementName" id="name4">
+🌍 Collect 30 countries
+</div>
+
+<div class="stats">
+
+<span class="people" id="people4">
+👥 118 players
+</span>
+
+<br>
+
+<span class="percent" id="percent4">
+📊 59%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement5"
+onchange="saveAchievement(5)"
+>
+
+<div class="achievementInfo">
+
+<div class="achievementName" id="name5">
+💀 Kill 100 players
+</div>
+
+<div class="stats">
+
+<span class="people" id="people5">
+👥 43 players
+</span>
+
+<br>
+
+<span class="percent" id="percent5">
+📊 21.5%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<a
+href="achievements.html"
+class="back"
+id="back">
+
+🏆 Achievements
+
+</a>
+
+</div>
+
+
+<script>
+
+/* =========================
+   🌐 ПЕРЕВОДЫ
+========================= */
+
+const translations = {
+
+en:{
+
+title:"🏆 Normal Achievements",
+
+subtitle:"Normal level — 5 achievements",
+
+name1:"👤 Get all regular characters",
+name2:"⬆️ Upgrade one character to level 5",
+name3:"💎 Reach Diamond 2",
+name4:"🌍 Collect 30 countries",
+name5:"💀 Kill 100 players",
+
+back:"🏆 Achievements",
+
+players:"players"
+
+},
+
+ru:{
+
+title:"🏆 Обычные достижения",
+
+subtitle:"Нормальный уровень — 5 достижений",
+
+name1:"👤 Получить всех обычных персонажей",
+name2:"⬆️ Прокачать одного персонажа до 5 уровня",
+name3:"💎 Дойти до Алмаз 2",
+name4:"🌍 Получить 30 стран",
+name5:"💀 Убить 100 игроков",
+
+back:"🏆 Достижения",
+
+players:"игроков"
+
+},
+
+uk:{
+
+title:"🏆 Звичайні досягнення",
+
+subtitle:"Нормальний рівень — 5 досягнень",
+
+name1:"👤 Отримати всіх звичайних персонажів",
+name2:"⬆️ Прокачати одного персонажа до 5 рівня",
+name3:"💎 Дійти до Алмаз 2",
+name4:"🌍 Отримати 30 країн",
+name5:"💀 Вбити 100 гравців",
+
+back:"🏆 Досягнення",
+
+players:"гравців"
+
+}
+
+};
+
+
+/* =========================
+   👥 ФЕЙКОВА СТАТИСТИКА
+   МАКСИМУМ 200
+========================= */
+
+const stats = [
+
+[86,43],
+
+[72,36],
+
+[54,27],
+
+[118,59],
+
+[43,21.5]
+
+];
+
+
+/* =========================
+   🌐 ЯЗЫК
+========================= */
+
+function getLanguage(){
+
+let language =
+localStorage.getItem("siteLanguage");
+
+if(
+language !== "en" &&
+language !== "ru" &&
+language !== "uk"
+){
+
+language="en";
+
+}
+
+return language;
+
+}
+
+
+/* =========================
+   🌐 ПРИМЕНИТЬ ЯЗЫК
+========================= */
+
+function applyLanguage(){
+
+const language =
+getLanguage();
+
+const t =
+translations[language];
+
+
+document.getElementById("title")
+.textContent=t.title;
+
+document.getElementById("subtitle")
+.textContent=t.subtitle;
+
+
+for(let i=1;i<=5;i++){
+
+document.getElementById(
+"name"+i
+).textContent=t["name"+i];
+
+
+document.getElementById(
+"people"+i
+).textContent=
+"👥 "+stats[i-1][0]+" "+t.players;
+
+
+document.getElementById(
+"percent"+i
+).textContent=
+"📊 "+stats[i-1][1]+"%";
+
+}
+
+
+document.getElementById("back")
+.textContent=t.back;
+
+document.documentElement.lang=
+language;
+
+}
+
+
+/* =========================
+   ☑️ СОХРАНЕНИЕ
+========================= */
+
+function saveAchievement(number){
+
+const checkbox =
+document.getElementById(
+"achievement"+number
+);
+
+localStorage.setItem(
+"normalAchievement"+number,
+checkbox.checked
+);
+
+
+const card =
+checkbox.closest(".achievement");
+
+
+if(checkbox.checked){
+
+card.classList.add("completed");
+
+}else{
+
+card.classList.remove("completed");
+
+}
+
+}
+
+
+/* =========================
+   ☑️ ЗАГРУЗКА
+========================= */
+
+function loadAchievements(){
+
+for(let i=1;i<=5;i++){
+
+const saved =
+localStorage.getItem(
+"normalAchievement"+i
+);
+
+const checkbox =
+document.getElementById(
+"achievement"+i
+);
+
+
+if(saved==="true"){
+
+checkbox.checked=true;
+
+checkbox.closest(
+".achievement"
+).classList.add("completed");
+
+}
+
+}
+
+}
+
+
+/* =========================
+   🚀 ЗАПУСК
+========================= */
+
+applyLanguage();
+
+loadAchievements();
+
+
+window.addEventListener(
+"pageshow",
+function(){
+
+applyLanguage();
+
+loadAchievements();
+
+});
+
+</script>
+
+</body>
+
+</html>
