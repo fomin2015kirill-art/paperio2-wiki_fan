@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Achievements — Paper.io 2 Wiki Fan</title>
 
@@ -18,7 +22,10 @@ body{
     transition:.3s;
 }
 
-/* ===== ADMIN SECRET ANIMATION ===== */
+
+/* =========================
+   🔐 ADMIN SECRET ANIMATION
+========================= */
 
 body.admin-secret{
     animation:adminFlash 1.4s forwards;
@@ -57,6 +64,11 @@ body.admin-secret{
     }
 }
 
+
+/* =========================
+   HEADER
+========================= */
+
 header{
     background:#080808;
     padding:25px 15px;
@@ -64,12 +76,50 @@ header{
     box-shadow:0 0 20px #00ff6633;
 }
 
-h1{
+
+/* =========================
+   🏆 КУБОК
+========================= */
+
+#title{
+
     margin:0;
+
     color:#00ff66;
+
     font-size:30px;
+
     text-shadow:0 0 10px #00ff66;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    -webkit-user-select:none;
+
+    touch-action:none;
+
+    -webkit-tap-highlight-color:transparent;
+
+    transition:.15s;
 }
+
+
+#title.admin-holding{
+
+    transform:scale(.95);
+
+    color:#ffaa00;
+
+    text-shadow:
+        0 0 10px #ffaa00,
+        0 0 25px #ffaa00;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
 
 .container{
     max-width:700px;
@@ -77,34 +127,55 @@ h1{
     padding:20px;
 }
 
+
 .subtitle{
     color:#ccc;
     font-size:18px;
     margin-bottom:30px;
 }
 
+
 .difficulty{
+
     display:block;
+
     width:100%;
+
     box-sizing:border-box;
+
     margin:15px 0;
+
     padding:20px;
+
     background:#0b0b0b;
+
     color:white;
+
     text-decoration:none;
+
     border:2px solid #00ff66;
+
     border-radius:16px;
+
     font-size:22px;
+
     font-weight:bold;
+
     transition:.25s;
 }
 
+
 .difficulty:hover{
+
     transform:scale(1.04);
+
     background:#00ff66;
+
     color:#000;
+
     box-shadow:0 0 25px #00ff66;
 }
+
 
 .easy{
     border-color:#00ff66;
@@ -126,25 +197,61 @@ h1{
     border-color:#aa00ff;
 }
 
+
+/* =========================
+   HOME
+========================= */
+
 .back{
+
     display:inline-block;
+
     margin-top:25px;
+
     padding:13px 22px;
+
     background:#00ff66;
+
     color:#000;
+
     text-decoration:none;
+
     font-weight:bold;
+
     border-radius:10px;
 }
 
+
 .back:hover{
+
     box-shadow:0 0 18px #00ff66;
 }
 
+
+/* =========================
+   📱 MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:28px;
+    }
+
+    .difficulty{
+        font-size:20px;
+        padding:18px;
+    }
+
+}
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -154,11 +261,13 @@ h1{
 
 </header>
 
+
 <div class="container">
 
 <p class="subtitle" id="subtitle">
 Choose achievement difficulty
 </p>
+
 
 <a href="easy.html"
 class="difficulty easy"
@@ -168,6 +277,7 @@ id="easy">
 
 </a>
 
+
 <a href="normal.html"
 class="difficulty normal"
 id="normal">
@@ -175,6 +285,7 @@ id="normal">
 🔵 Normal
 
 </a>
+
 
 <a href="hard.html"
 class="difficulty hard"
@@ -184,6 +295,7 @@ id="hard">
 
 </a>
 
+
 <a href="expert.html"
 class="difficulty expert"
 id="expert">
@@ -191,6 +303,7 @@ id="expert">
 🔴 Expert
 
 </a>
+
 
 <a href="impossible.html"
 class="difficulty impossible"
@@ -200,7 +313,9 @@ id="impossible">
 
 </a>
 
+
 <br>
+
 
 <a href="index.html"
 class="back"
@@ -212,45 +327,46 @@ id="back">
 
 </div>
 
+
 <script>
 
 /* =========================
-   🌐 ПЕРЕВОД
+   🌐 ПЕРЕВОДЫ
 ========================= */
 
 const translations = {
 
 en:{
-title:"🏆 Achievements",
-subtitle:"Choose achievement difficulty",
-easy:"🟢 Easy",
-normal:"🔵 Normal",
-hard:"🟠 Hard",
-expert:"🔴 Expert",
-impossible:"💀 Impossible",
-back:"🏠 Home"
+    title:"🏆 Achievements",
+    subtitle:"Choose achievement difficulty",
+    easy:"🟢 Easy",
+    normal:"🔵 Normal",
+    hard:"🟠 Hard",
+    expert:"🔴 Expert",
+    impossible:"💀 Impossible",
+    back:"🏠 Home"
 },
 
 ru:{
-title:"🏆 Достижения",
-subtitle:"Выберите сложность достижений",
-easy:"🟢 Легко",
-normal:"🔵 Нормально",
-hard:"🟠 Сложно",
-expert:"🔴 Эксперт",
-impossible:"💀 Невозможно",
-back:"🏠 На главную"
+    title:"🏆 Достижения",
+    subtitle:"Выберите сложность достижений",
+    easy:"🟢 Легко",
+    normal:"🔵 Нормально",
+    hard:"🟠 Сложно",
+    expert:"🔴 Эксперт",
+    impossible:"💀 Невозможно",
+    back:"🏠 На главную"
 },
 
 uk:{
-title:"🏆 Досягнення",
-subtitle:"Оберіть складність досягнень",
-easy:"🟢 Легко",
-normal:"🔵 Нормально",
-hard:"🟠 Складно",
-expert:"🔴 Експерт",
-impossible:"💀 Неможливо",
-back:"🏠 На головну"
+    title:"🏆 Досягнення",
+    subtitle:"Оберіть складність досягнень",
+    easy:"🟢 Легко",
+    normal:"🔵 Нормально",
+    hard:"🟠 Складно",
+    expert:"🔴 Експерт",
+    impossible:"💀 Неможливо",
+    back:"🏠 На головну"
 }
 
 };
@@ -262,108 +378,271 @@ back:"🏠 На головну"
 
 function getLanguage(){
 
-let language =
-localStorage.getItem("siteLanguage");
+    let language =
+    localStorage.getItem("siteLanguage");
 
-if(
-language !== "en" &&
-language !== "ru" &&
-language !== "uk"
-){
-language="en";
-}
+    if(
+        language !== "en" &&
+        language !== "ru" &&
+        language !== "uk"
+    ){
 
-return language;
+        language="en";
+
+    }
+
+    return language;
+
 }
 
 
 function applyLanguage(){
 
-const t =
-translations[getLanguage()];
+    const t =
+    translations[getLanguage()];
 
-document.getElementById("title")
-.textContent=t.title;
+    document.getElementById("title")
+    .textContent=t.title;
 
-document.getElementById("subtitle")
-.textContent=t.subtitle;
+    document.getElementById("subtitle")
+    .textContent=t.subtitle;
 
-document.getElementById("easy")
-.textContent=t.easy;
+    document.getElementById("easy")
+    .textContent=t.easy;
 
-document.getElementById("normal")
-.textContent=t.normal;
+    document.getElementById("normal")
+    .textContent=t.normal;
 
-document.getElementById("hard")
-.textContent=t.hard;
+    document.getElementById("hard")
+    .textContent=t.hard;
 
-document.getElementById("expert")
-.textContent=t.expert;
+    document.getElementById("expert")
+    .textContent=t.expert;
 
-document.getElementById("impossible")
-.textContent=t.impossible;
+    document.getElementById("impossible")
+    .textContent=t.impossible;
 
-document.getElementById("back")
-.textContent=t.back;
+    document.getElementById("back")
+    .textContent=t.back;
 
-document.documentElement.lang =
-getLanguage();
+    document.documentElement.lang =
+    getLanguage();
 
 }
 
+
 applyLanguage();
 
+
 window.addEventListener(
-"pageshow",
-applyLanguage
+    "pageshow",
+    applyLanguage
 );
 
 
 /* =========================
    👑 SECRET ADMIN
+   🔐 ЗАЖАТЬ 🏆 0.7 СЕКУНДЫ
 ========================= */
 
-let adminClicks=0;
-let adminTimer=null;
+const adminButton =
+document.getElementById("title");
+
+let adminHoldTimer = null;
+
+let adminHolding = false;
 
 
-/*
-   Эта функция вызывается
-   с кнопки "Достижения"
-   на главной странице.
-*/
+/* =========================
+   📱 НАЧАЛО ЗАЖАТИЯ
+========================= */
 
-function openAdmin(){
+adminButton.addEventListener(
+    "touchstart",
+    function(event){
 
-adminClicks++;
+        event.preventDefault();
 
-clearTimeout(adminTimer);
+        adminHolding = true;
 
-adminTimer=setTimeout(function(){
+        adminButton.classList.add(
+            "admin-holding"
+        );
 
-adminClicks=0;
+        adminHoldTimer =
+        setTimeout(function(){
 
-},800);
+            if(adminHolding){
 
-if(adminClicks===2){
+                adminHolding = false;
 
-adminClicks=0;
+                adminButton.classList.remove(
+                    "admin-holding"
+                );
 
-document.body.classList.add(
-"admin-secret"
+                document.body.classList.add(
+                    "admin-secret"
+                );
+
+                setTimeout(function(){
+
+                    window.location.href =
+                    "admin.html";
+
+                },1400);
+
+            }
+
+        },700);
+
+    },
+    {passive:false}
 );
 
-setTimeout(function(){
 
-window.location.href="admin.html";
+/* =========================
+   📱 ОТПУСКАНИЕ
+========================= */
 
-},1400);
+adminButton.addEventListener(
+    "touchend",
+    function(event){
 
-}
+        event.preventDefault();
 
-}
+        adminHolding = false;
+
+        clearTimeout(
+            adminHoldTimer
+        );
+
+        adminButton.classList.remove(
+            "admin-holding"
+        );
+
+    },
+    {passive:false}
+);
+
+
+/* =========================
+   📱 ОТМЕНА
+========================= */
+
+adminButton.addEventListener(
+    "touchcancel",
+    function(){
+
+        adminHolding = false;
+
+        clearTimeout(
+            adminHoldTimer
+        );
+
+        adminButton.classList.remove(
+            "admin-holding"
+        );
+
+    }
+);
+
+
+/* =========================
+   🖥️ ПК
+========================= */
+
+adminButton.addEventListener(
+    "mousedown",
+    function(event){
+
+        event.preventDefault();
+
+        adminHolding = true;
+
+        adminButton.classList.add(
+            "admin-holding"
+        );
+
+        adminHoldTimer =
+        setTimeout(function(){
+
+            if(adminHolding){
+
+                adminHolding = false;
+
+                adminButton.classList.remove(
+                    "admin-holding"
+                );
+
+                document.body.classList.add(
+                    "admin-secret"
+                );
+
+                setTimeout(function(){
+
+                    window.location.href =
+                    "admin.html";
+
+                },1400);
+
+            }
+
+        },700);
+
+    }
+);
+
+
+/* =========================
+   🖥️ ОТПУСКАНИЕ МЫШИ
+========================= */
+
+adminButton.addEventListener(
+    "mouseup",
+    function(){
+
+        adminHolding = false;
+
+        clearTimeout(
+            adminHoldTimer
+        );
+
+        adminButton.classList.remove(
+            "admin-holding"
+        );
+
+    }
+);
+
+
+/* =========================
+   🔄 СБРОС
+========================= */
+
+window.addEventListener(
+    "pageshow",
+    function(){
+
+        adminHolding = false;
+
+        clearTimeout(
+            adminHoldTimer
+        );
+
+        document.body.classList.remove(
+            "admin-secret"
+        );
+
+        adminButton.classList.remove(
+            "admin-holding"
+        );
+
+    }
+);
 
 </script>
 
+
 </body>
-</html>
+
+    </html>
