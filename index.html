@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +14,71 @@ body{
     background:#050505;
     color:white;
     text-align:center;
+    transition:0.3s;
 }
+
+/* 🔴 СЕКРЕТНАЯ АНИМАЦИЯ */
+
+body.secret-transition{
+    animation: redHack 1.8s forwards;
+}
+
+@keyframes redHack{
+
+    0%{
+        background:#050505;
+        filter:none;
+    }
+
+    25%{
+        background:#180000;
+        filter:sepia(0.5) saturate(2);
+    }
+
+    50%{
+        background:#300000;
+        filter:sepia(0.8) saturate(4);
+    }
+
+    75%{
+        background:#500000;
+        filter:sepia(1) saturate(7);
+    }
+
+    100%{
+        background:#000000;
+        filter:brightness(0.25) sepia(1) saturate(10);
+    }
+}
+
+/* Кнопка Wiki */
+
+#wiki{
+    position:relative;
+}
+
+#wiki.secret-click{
+    animation: wikiPress 0.35s;
+}
+
+@keyframes wikiPress{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(0.88);
+        background:#ff2222;
+        color:white;
+        border-color:#ff2222;
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
 
 header{
     background:#080808;
@@ -111,32 +173,66 @@ footer{
 <body>
 
 <header>
-    <h1 id="siteTitle">🎮 Paper.io 2 Wiki Fan</h1>
+
+<h1 id="siteTitle">
+🎮 Paper.io 2 Wiki Fan
+</h1>
+
 </header>
+
 
 <nav>
 
-<a href="skins.html" id="skins">👤 Skins</a>
+<a href="skins.html" id="skins">
+👤 Skins
+</a>
 
-<a href="ranks.html" id="ranks">🏆 Ranks</a>
+<a href="ranks.html" id="ranks">
+🏆 Ranks
+</a>
 
-<a href="countries.html" id="countries">🌍 Countries</a>
+<a href="countries.html" id="countries">
+🌍 Countries
+</a>
 
-<a href="bugs.html" id="bugs">🐛 Bugs</a>
+<a href="bugs.html" id="bugs">
+🐛 Bugs
+</a>
 
-<a href="tips.html" id="tips">⚔️ Tips</a>
+<a href="tips.html" id="tips">
+⚔️ Tips
+</a>
 
-<a href="statistics.html" id="statistics">📊 Statistics</a>
+<a href="statistics.html" id="statistics">
+📊 Statistics
+</a>
 
-<a href="about.html" id="about">ℹ️ About</a>
+<a href="about.html" id="about">
+ℹ️ About
+</a>
 
-<a href="settings.html" id="settings">⚙️ Settings</a>
+<a href="settings.html" id="settings">
+⚙️ Settings
+</a>
+
+<!-- 🔐 СЕКРЕТНАЯ WIKI -->
+
+<a href="javascript:void(0)"
+   id="wiki"
+   onclick="wikiSecret()">
+
+📖 Wiki
+
+</a>
 
 </nav>
 
+
 <div id="content">
 
-<h2 id="welcome">🚀 Welcome!</h2>
+<h2 id="welcome">
+🚀 Welcome!
+</h2>
 
 <p id="description">
 This is a fan-made Wiki about Paper.io 2.
@@ -149,9 +245,12 @@ bugs, tips and game statistics.
 
 </div>
 
+
 <div class="info">
 
-<h2 id="sections">📚 Wiki Sections</h2>
+<h2 id="sections">
+📚 Wiki Sections
+</h2>
 
 <p id="skinsInfo">
 👤 Skins — information about skins and characters.
@@ -179,165 +278,359 @@ bugs, tips and game statistics.
 
 </div>
 
+
 <footer>
 
-<span id="created">Created by Kirill ❤️ with ChatGPT</span>
+<span id="created">
+Created by Kirill ❤️ with ChatGPT
+</span>
 
 <br><br>
 
-<span id="version">Paper.io 2 Wiki Fan — Beta 0.2</span>
+<span id="version">
+Paper.io 2 Wiki Fan — Beta 0.2
+</span>
 
 </footer>
 
+
 <script>
+
+/* =========================
+   🌐 ПЕРЕВОДЫ
+========================= */
 
 const translations = {
 
 en:{
-    siteTitle:"🎮 Paper.io 2 Wiki Fan",
 
-    skins:"👤 Skins",
-    ranks:"🏆 Ranks",
-    countries:"🌍 Countries",
-    bugs:"🐛 Bugs",
-    tips:"⚔️ Tips",
-    statistics:"📊 Statistics",
-    about:"ℹ️ About",
-    settings:"⚙️ Settings",
+siteTitle:"🎮 Paper.io 2 Wiki Fan",
 
-    welcome:"🚀 Welcome!",
+skins:"👤 Skins",
+ranks:"🏆 Ranks",
+countries:"🌍 Countries",
+bugs:"🐛 Bugs",
+tips:"⚔️ Tips",
+statistics:"📊 Statistics",
+about:"ℹ️ About",
+settings:"⚙️ Settings",
 
-    description:"This is a fan-made Wiki about Paper.io 2.",
+wiki:"📖 Wiki",
 
-    description2:"Here you can find ranks, skins, countries, bugs, tips and game statistics.",
+welcome:"🚀 Welcome!",
 
-    sections:"📚 Wiki Sections",
+description:"This is a fan-made Wiki about Paper.io 2.",
 
-    skinsInfo:"👤 Skins — information about skins and characters.",
-    ranksInfo:"🏆 Ranks — rank system and world league.",
-    countriesInfo:"🌍 Countries — list of all available countries.",
-    bugsInfo:"🐛 Bugs — discovered bugs and unusual situations.",
-    tipsInfo:"⚔️ Tips — useful ways to improve your gameplay.",
-    statisticsInfo:"📊 Statistics — achievements and player statistics.",
+description2:
+"Here you can find ranks, skins, countries, bugs, tips and game statistics.",
 
-    created:"Created by Kirill ❤️ with ChatGPT",
-    version:"Paper.io 2 Wiki Fan — Beta 0.2"
+sections:"📚 Wiki Sections",
+
+skinsInfo:
+"👤 Skins — information about skins and characters.",
+
+ranksInfo:
+"🏆 Ranks — rank system and world league.",
+
+countriesInfo:
+"🌍 Countries — list of all available countries.",
+
+bugsInfo:
+"🐛 Bugs — discovered bugs and unusual situations.",
+
+tipsInfo:
+"⚔️ Tips — useful ways to improve your gameplay.",
+
+statisticsInfo:
+"📊 Statistics — achievements and player statistics.",
+
+created:"Created by Kirill ❤️ with ChatGPT",
+
+version:"Paper.io 2 Wiki Fan — Beta 0.2"
+
 },
 
 ru:{
-    siteTitle:"🎮 Фанатская Wiki Paper.io 2",
 
-    skins:"👤 Скины",
-    ranks:"🏆 Ранги",
-    countries:"🌍 Страны",
-    bugs:"🐛 Ошибки",
-    tips:"⚔️ Советы",
-    statistics:"📊 Статистика",
-    about:"ℹ️ О сайте",
-    settings:"⚙️ Настройки",
+siteTitle:"🎮 Фанатская Wiki Paper.io 2",
 
-    welcome:"🚀 Добро пожаловать!",
+skins:"👤 Скины",
+ranks:"🏆 Ранги",
+countries:"🌍 Страны",
+bugs:"🐛 Ошибки",
+tips:"⚔️ Советы",
+statistics:"📊 Статистика",
+about:"ℹ️ О сайте",
+settings:"⚙️ Настройки",
 
-    description:"Это фанатская Wiki по Paper.io 2.",
+wiki:"📖 Wiki",
 
-    description2:"Здесь будут собраны ранги, скины, страны, баги, советы и статистика игры.",
+welcome:"🚀 Добро пожаловать!",
 
-    sections:"📚 Разделы Wiki",
+description:
+"Это фанатская Wiki по Paper.io 2.",
 
-    skinsInfo:"👤 Скины — информация о скинах и персонажах.",
-    ranksInfo:"🏆 Ранги — система рангов и мировая лига.",
-    countriesInfo:"🌍 Страны — список всех доступных стран.",
-    bugsInfo:"🐛 Ошибки — найденные баги и необычные ситуации.",
-    tipsInfo:"⚔️ Советы — полезные способы улучшить игру.",
-    statisticsInfo:"📊 Статистика — достижения и статистика игрока.",
+description2:
+"Здесь будут собраны ранги, скины, страны, баги, советы и статистика игры.",
 
-    created:"Создано Кириллом ❤️ с помощью ChatGPT",
-    version:"Paper.io 2 Wiki Fan — Beta 0.2"
+sections:"📚 Разделы Wiki",
+
+skinsInfo:
+"👤 Скины — информация о скинах и персонажах.",
+
+ranksInfo:
+"🏆 Ранги — система рангов и мировая лига.",
+
+countriesInfo:
+"🌍 Страны — список всех доступных стран.",
+
+bugsInfo:
+"🐛 Ошибки — найденные баги и необычные ситуации.",
+
+tipsInfo:
+"⚔️ Советы — полезные способы улучшить игру.",
+
+statisticsInfo:
+"📊 Статистика — достижения и статистика игрока.",
+
+created:
+"Создано Кириллом ❤️ с помощью ChatGPT",
+
+version:
+"Paper.io 2 Wiki Fan — Beta 0.2"
+
 },
 
 uk:{
-    siteTitle:"🎮 Фанатська Wiki Paper.io 2",
 
-    skins:"👤 Скіни",
-    ranks:"🏆 Ранги",
-    countries:"🌍 Країни",
-    bugs:"🐛 Помилки",
-    tips:"⚔️ Поради",
-    statistics:"📊 Статистика",
-    about:"ℹ️ Про сайт",
-    settings:"⚙️ Налаштування",
+siteTitle:"🎮 Фанатська Wiki Paper.io 2",
 
-    welcome:"🚀 Ласкаво просимо!",
+skins:"👤 Скіни",
+ranks:"🏆 Ранги",
+countries:"🌍 Країни",
+bugs:"🐛 Помилки",
+tips:"⚔️ Поради",
+statistics:"📊 Статистика",
+about:"ℹ️ Про сайт",
+settings:"⚙️ Налаштування",
 
-    description:"Це фанатська Wiki про Paper.io 2.",
+wiki:"📖 Wiki",
 
-    description2:"Тут зібрані ранги, скіни, країни, баги, поради та статистика гри.",
+welcome:"🚀 Ласкаво просимо!",
 
-    sections:"📚 Розділи Wiki",
+description:
+"Це фанатська Wiki про Paper.io 2.",
 
-    skinsInfo:"👤 Скіни — інформація про скіни та персонажів.",
-    ranksInfo:"🏆 Ранги — система рангів і світова ліга.",
-    countriesInfo:"🌍 Країни — список усіх доступних країн.",
-    bugsInfo:"🐛 Помилки — знайдені баги та незвичайні ситуації.",
-    tipsInfo:"⚔️ Поради — корисні способи покращити гру.",
-    statisticsInfo:"📊 Статистика — досягнення та статистика гравця.",
+description2:
+"Тут зібрані ранги, скіни, країни, баги, поради та статистика гри.",
 
-    created:"Створено Кирилом ❤️ за допомогою ChatGPT",
-    version:"Paper.io 2 Wiki Fan — Beta 0.2"
+sections:"📚 Розділи Wiki",
+
+skinsInfo:
+"👤 Скіни — інформація про скіни та персонажів.",
+
+ranksInfo:
+"🏆 Ранги — система рангів і світова ліга.",
+
+countriesInfo:
+"🌍 Країни — список усіх доступних країн.",
+
+bugsInfo:
+"🐛 Помилки — знайдені баги та незвичайні ситуації.",
+
+tipsInfo:
+"⚔️ Поради — корисні способи покращити гру.",
+
+statisticsInfo:
+"📊 Статистика — досягнення та статистика гравця.",
+
+created:
+"Створено Кирилом ❤️ за допомогою ChatGPT",
+
+version:
+"Paper.io 2 Wiki Fan — Beta 0.2"
+
 }
 
 };
 
 
+/* =========================
+   🌐 ЯЗЫК
+========================= */
+
 function applyLanguage(language){
 
-    const t = translations[language] || translations.en;
+const t =
+translations[language] ||
+translations.en;
 
-    document.getElementById("siteTitle").textContent = t.siteTitle;
+document.getElementById("siteTitle").textContent =
+t.siteTitle;
 
-    document.getElementById("skins").textContent = t.skins;
-    document.getElementById("ranks").textContent = t.ranks;
-    document.getElementById("countries").textContent = t.countries;
-    document.getElementById("bugs").textContent = t.bugs;
-    document.getElementById("tips").textContent = t.tips;
-    document.getElementById("statistics").textContent = t.statistics;
-    document.getElementById("about").textContent = t.about;
-    document.getElementById("settings").textContent = t.settings;
+document.getElementById("skins").textContent =
+t.skins;
 
-    document.getElementById("welcome").textContent = t.welcome;
+document.getElementById("ranks").textContent =
+t.ranks;
 
-    document.getElementById("description").textContent = t.description;
-    document.getElementById("description2").textContent = t.description2;
+document.getElementById("countries").textContent =
+t.countries;
 
-    document.getElementById("sections").textContent = t.sections;
+document.getElementById("bugs").textContent =
+t.bugs;
 
-    document.getElementById("skinsInfo").textContent = t.skinsInfo;
-    document.getElementById("ranksInfo").textContent = t.ranksInfo;
-    document.getElementById("countriesInfo").textContent = t.countriesInfo;
-    document.getElementById("bugsInfo").textContent = t.bugsInfo;
-    document.getElementById("tipsInfo").textContent = t.tipsInfo;
-    document.getElementById("statisticsInfo").textContent = t.statisticsInfo;
+document.getElementById("tips").textContent =
+t.tips;
 
-    document.getElementById("created").textContent = t.created;
-    document.getElementById("version").textContent = t.version;
+document.getElementById("statistics").textContent =
+t.statistics;
 
-    document.documentElement.lang = language;
+document.getElementById("about").textContent =
+t.about;
+
+document.getElementById("settings").textContent =
+t.settings;
+
+document.getElementById("wiki").textContent =
+t.wiki;
+
+document.getElementById("welcome").textContent =
+t.welcome;
+
+document.getElementById("description").textContent =
+t.description;
+
+document.getElementById("description2").textContent =
+t.description2;
+
+document.getElementById("sections").textContent =
+t.sections;
+
+document.getElementById("skinsInfo").textContent =
+t.skinsInfo;
+
+document.getElementById("ranksInfo").textContent =
+t.ranksInfo;
+
+document.getElementById("countriesInfo").textContent =
+t.countriesInfo;
+
+document.getElementById("bugsInfo").textContent =
+t.bugsInfo;
+
+document.getElementById("tipsInfo").textContent =
+t.tipsInfo;
+
+document.getElementById("statisticsInfo").textContent =
+t.statisticsInfo;
+
+document.getElementById("created").textContent =
+t.created;
+
+document.getElementById("version").textContent =
+t.version;
+
+document.documentElement.lang =
+language;
+
 }
 
 
 /* Первый вход = English */
 
-let language = localStorage.getItem("siteLanguage");
+let language =
+localStorage.getItem("siteLanguage");
 
 if(!language){
-    language = "en";
-    localStorage.setItem("siteLanguage","en");
+
+language = "en";
+
+localStorage.setItem(
+"siteLanguage",
+"en"
+);
+
 }
 
 applyLanguage(language);
+
+
+/* =========================
+   🔐 СЕКРЕТНАЯ ПАСХАЛКА
+========================= */
+
+let wikiClicks = 0;
+
+let wikiTimer = null;
+
+
+function wikiSecret(){
+
+wikiClicks++;
+
+
+/* Мини-анимация кнопки */
+
+const wikiButton =
+document.getElementById("wiki");
+
+wikiButton.classList.remove(
+"secret-click"
+);
+
+void wikiButton.offsetWidth;
+
+wikiButton.classList.add(
+"secret-click"
+);
+
+
+/* Сбрасываем таймер */
+
+clearTimeout(wikiTimer);
+
+
+/* Если второй клик не произошёл
+   быстро — начинаем заново */
+
+wikiTimer = setTimeout(function(){
+
+wikiClicks = 0;
+
+},700);
+
+
+/* ДВА КЛИКА */
+
+if(wikiClicks === 2){
+
+wikiClicks = 0;
+
+
+/* Красная анимация */
+
+document.body.classList.add(
+"secret-transition"
+);
+
+
+/* Открываем Hacker.html */
+
+setTimeout(function(){
+
+window.location.href =
+"Hacker.html";
+
+},1800);
+
+}
+
+}
 
 </script>
 
 </body>
     </html>
+
 
