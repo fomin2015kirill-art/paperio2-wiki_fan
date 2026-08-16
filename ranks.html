@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Paper.io 2 Wiki Fan</title>
+<title>Ranks — Paper.io 2 Wiki Fan</title>
 
 <style>
 
@@ -72,15 +72,23 @@ h1{
 }
 
 .back{
-    display:inline-block;
-    margin-top:10px;
-    padding:12px 20px;
+    display:block;
+    width:max-content;
+    margin:25px auto 10px;
+    padding:13px 22px;
     background:#00ff66;
     color:#000;
     text-decoration:none;
     font-weight:bold;
     border-radius:10px;
     box-shadow:0 0 12px #00ff6655;
+    transition:.2s;
+}
+
+.back:hover{
+    background:#00cc52;
+    box-shadow:0 0 18px #00ff6688;
+    transform:scale(1.04);
 }
 
 </style>
@@ -103,11 +111,12 @@ h1{
 <div class="container">
 
 
+<!-- БРОНЗА -->
+
 <div class="rank">
 <h2>🥉 <span id="bronze2"></span></h2>
 <div class="hp">720 HP</div>
 </div>
-
 
 <div class="rank">
 <h2>🥉 <span id="bronze3"></span></h2>
@@ -115,17 +124,17 @@ h1{
 </div>
 
 
+<!-- СЕРЕБРО -->
+
 <div class="rank">
 <h2>🥈 <span id="silver1"></span></h2>
 <div class="hp">2 620 HP</div>
 </div>
 
-
 <div class="rank">
 <h2>🥈 <span id="silver2"></span></h2>
 <div class="hp">3 860 HP</div>
 </div>
-
 
 <div class="rank">
 <h2>🥈 <span id="silver3"></span></h2>
@@ -133,17 +142,17 @@ h1{
 </div>
 
 
+<!-- ЗОЛОТО -->
+
 <div class="rank">
 <h2>🥇 <span id="gold1"></span></h2>
 <div class="hp">7 140 HP</div>
 </div>
 
-
 <div class="rank">
 <h2>🥇 <span id="gold2"></span></h2>
 <div class="hp">9 290 HP</div>
 </div>
-
 
 <div class="rank">
 <h2>🥇 <span id="gold3"></span></h2>
@@ -151,17 +160,17 @@ h1{
 </div>
 
 
+<!-- ПЛАТИНА -->
+
 <div class="rank">
 <h2>🔷 <span id="platinum1"></span></h2>
 <div class="hp">14 970 HP</div>
 </div>
 
-
 <div class="rank">
 <h2>🔷 <span id="platinum2"></span></h2>
 <div class="hp">18 690 HP</div>
 </div>
-
 
 <div class="rank">
 <h2>🔷 <span id="platinum3"></span></h2>
@@ -169,17 +178,17 @@ h1{
 </div>
 
 
+<!-- АЛМАЗ -->
+
 <div class="rank">
 <h2>💎 <span id="diamond1"></span></h2>
 <div class="hp">28 500 HP</div>
 </div>
 
-
 <div class="rank">
 <h2>💎 <span id="diamond2"></span></h2>
 <div class="hp">34 920 HP</div>
 </div>
-
 
 <div class="rank">
 <h2>💎 <span id="diamond3"></span></h2>
@@ -187,17 +196,17 @@ h1{
 </div>
 
 
+<!-- ЭЛИТА -->
+
 <div class="rank">
 <h2>👑 <span id="elite1"></span></h2>
 <div class="hp">51 860 HP</div>
 </div>
 
-
 <div class="rank">
 <h2>👑 <span id="elite2"></span></h2>
 <div class="hp">62 950 HP</div>
 </div>
-
 
 <div class="rank">
 <h2>👑 <span id="elite3"></span></h2>
@@ -205,17 +214,17 @@ h1{
 </div>
 
 
+<!-- МАСТЕР -->
+
 <div class="rank">
 <h2>🔥 <span id="master1"></span></h2>
 <div class="hp">92 230 HP</div>
 </div>
 
-
 <div class="rank">
 <h2>🔥 <span id="master2"></span></h2>
 <div class="hp">114 000 HP</div>
 </div>
-
 
 <div class="rank">
 <h2>🔥 <span id="master3"></span></h2>
@@ -223,17 +232,17 @@ h1{
 </div>
 
 
+<!-- ЧЕМПИОН -->
+
 <div class="rank">
 <h2>🏆 <span id="champion1"></span></h2>
 <div class="hp">162 000 HP</div>
 </div>
 
-
 <div class="rank">
 <h2>🏆 <span id="champion2"></span></h2>
 <div class="hp">195 120 HP</div>
 </div>
-
 
 <div class="rank">
 
@@ -251,6 +260,8 @@ id="championPercent">
 
 </div>
 
+
+<!-- ЛЕГЕНДА -->
 
 <div class="rank">
 
@@ -303,6 +314,8 @@ id="legend3Percent">
 </div>
 
 
+<!-- КНОПКА НА ГЛАВНУЮ -->
+
 <a
 class="back"
 href="index.html"
@@ -318,35 +331,21 @@ id="backButton">
 
 <script>
 
+
 /* =========================================
-   🌐 ЕДИНЫЙ ЯЗЫК САЙТА
+   🌐 ПОЛУЧАЕМ СОХРАНЁННЫЙ ЯЗЫК
 ========================================= */
 
+function getLanguage(){
 
-/*
-   ВАЖНО:
-
-   Настройки сохраняют:
-
-   siteLanguage = ru
-   siteLanguage = en
-   siteLanguage = uk
-
-   Поэтому здесь читаем ТОЧНО ЭТОТ ключ.
-*/
-
-
-function getSiteLanguage(){
-
-    let lang =
+    const saved =
         localStorage.getItem("siteLanguage");
 
-
-    if(lang === "ru"){
+    if(saved === "ru"){
         return "ru";
     }
 
-    if(lang === "uk"){
+    if(saved === "uk"){
         return "uk";
     }
 
@@ -359,7 +358,7 @@ function getSiteLanguage(){
    🇬🇧 ENGLISH
 ========================================= */
 
-const EN = {
+const en = {
 
     title:"🏆 Ranks — Paper.io 2",
 
@@ -412,7 +411,7 @@ const EN = {
    🇷🇺 РУССКИЙ
 ========================================= */
 
-const RU = {
+const ru = {
 
     title:"🏆 Ранги — Paper.io 2",
 
@@ -465,7 +464,7 @@ const RU = {
    🇺🇦 УКРАЇНСЬКА
 ========================================= */
 
-const UK = {
+const uk = {
 
     title:"🏆 Ранги — Paper.io 2",
 
@@ -515,54 +514,56 @@ const UK = {
 
 
 /* =========================================
-   🌐 ПРИМЕНЕНИЕ
+   🔄 ПРИМЕНЯЕМ ЯЗЫК
 ========================================= */
 
-function updatePage(){
+function applyLanguage(){
 
-    const lang =
-        getSiteLanguage();
-
-
-    let text;
+    const language =
+        getLanguage();
 
 
-    if(lang === "ru"){
+    let t;
 
-        text = RU;
 
-    }
+    if(language === "ru"){
 
-    else if(lang === "uk"){
-
-        text = UK;
+        t = ru;
 
     }
+    else if(language === "uk"){
 
+        t = uk;
+
+    }
     else{
 
-        text = EN;
+        t = en;
 
     }
 
 
-    /* Заголовок */
+    document.documentElement.lang =
+        language;
+
+
+    document.title =
+        t.title;
+
 
     document.getElementById(
         "pageTitle"
-    ).textContent = text.title;
+    ).textContent =
+        t.title;
 
-
-    /* Кнопка */
 
     document.getElementById(
         "backButton"
-    ).textContent = text.back;
+    ).textContent =
+        t.back;
 
 
-    /* Все ранги */
-
-    const ids = [
+    const rankIds = [
 
         "bronze2",
         "bronze3",
@@ -602,44 +603,36 @@ function updatePage(){
     ];
 
 
-    ids.forEach(function(id){
+    rankIds.forEach(function(id){
 
         document.getElementById(id)
-            .textContent = text[id];
+            .textContent = t[id];
 
     });
 
 
-    /* Проценты */
-
     document.getElementById(
         "championPercent"
     ).textContent =
-        text.championPercent;
+        t.championPercent;
 
 
     document.getElementById(
         "legend1Percent"
     ).textContent =
-        text.legend1Percent;
+        t.legend1Percent;
 
 
     document.getElementById(
         "legend2Percent"
     ).textContent =
-        text.legend2Percent;
+        t.legend2Percent;
 
 
     document.getElementById(
         "legend3Percent"
     ).textContent =
-        text.legend3Percent;
-
-
-    /* HTML язык */
-
-    document.documentElement.lang =
-        lang;
+        t.legend3Percent;
 
 }
 
@@ -648,38 +641,34 @@ function updatePage(){
    🚀 ЗАПУСК
 ========================================= */
 
-updatePage();
+applyLanguage();
 
 
 /*
-   Если возвращаемся назад
-   из другой страницы
+   Когда возвращаемся на страницу
 */
 
 window.addEventListener(
     "pageshow",
     function(){
 
-        updatePage();
+        applyLanguage();
 
     }
 );
 
 
 /*
-   Если язык изменился
-   в другой вкладке
+   Если язык изменили в другой вкладке
 */
 
 window.addEventListener(
     "storage",
     function(event){
 
-        if(
-            event.key === "siteLanguage"
-        ){
+        if(event.key === "siteLanguage"){
 
-            updatePage();
+            applyLanguage();
 
         }
 
@@ -691,4 +680,4 @@ window.addEventListener(
 
 </body>
 
-    </html>
+          </html>
