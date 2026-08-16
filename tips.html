@@ -1,5 +1,8 @@
 
 
+
+tips.html
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -11,18 +14,22 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #111;
+            background: #050505;
             color: white;
         }
 
         header {
-            background: #222;
-            padding: 20px;
+            background: #080808;
+            padding: 25px 15px;
             text-align: center;
+            border-bottom: 2px solid #00ff66;
+            box-shadow: 0 0 15px #00ff6633;
         }
 
         h1 {
             margin: 0;
+            color: #00ff66;
+            text-shadow: 0 0 10px #00ff66;
         }
 
         .container {
@@ -32,34 +39,45 @@
         }
 
         .tip {
-            background: #1e1e1e;
-            border: 1px solid #333;
+            background: #0b0b0b;
+            border: 1px solid #00ff66;
             border-radius: 14px;
             padding: 18px;
-            margin-bottom: 14px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px #00ff6618;
+        }
+
+        .tip:hover {
+            box-shadow: 0 0 18px #00ff6644;
+            transform: translateY(-2px);
+            transition: 0.2s;
         }
 
         .tip h2 {
             margin-top: 0;
+            color: #00ff66;
         }
 
         .tip p {
-            line-height: 1.5;
-            color: #ddd;
+            line-height: 1.6;
+            color: #dddddd;
+            font-size: 16px;
         }
 
         .back {
             display: inline-block;
             margin-top: 10px;
-            padding: 12px 18px;
-            background: #333;
-            color: white;
+            padding: 12px 20px;
+            background: #00ff66;
+            color: #000;
             text-decoration: none;
-            border-radius: 8px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 0 12px #00ff6655;
         }
 
         .back:hover {
-            background: #444;
+            background: #00cc52;
         }
     </style>
 </head>
@@ -84,8 +102,7 @@
         <h2>⭕ 2. Быстро закрывайте круг</h2>
         <p>
             Если возле края карты никого нет, а много игроков находится ближе к центру,
-            старайтесь быстрее замыкать свой круг. Не делайте слишком длинный выход,
-            если рядом есть опасность.
+            старайтесь быстрее замыкать свой круг.
         </p>
     </div>
 
@@ -121,4 +138,4 @@
 </div>
 
 </body>
-</html>
+    </html>
