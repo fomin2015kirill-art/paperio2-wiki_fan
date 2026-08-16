@@ -1,10 +1,12 @@
-settings.html
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Settings — Paper.io 2 Wiki Fan</title>
 
@@ -59,16 +61,28 @@ header h1{
 
 .language{
     padding:15px;
+
     border:2px solid #00ff66;
+
     background:#050505;
+
     color:#00ff66;
+
     border-radius:12px;
+
     cursor:pointer;
+
     font-size:17px;
+
     font-weight:bold;
+
+    transition:0.2s;
 }
 
-.language:hover,
+.language:hover{
+    transform:scale(1.02);
+}
+
 .language.active{
     background:#00ff66;
     color:#000;
@@ -77,150 +91,312 @@ header h1{
 
 .back{
     display:inline-block;
+
     margin-top:20px;
+
     padding:13px 22px;
+
     background:#00ff66;
+
     color:#000;
+
     text-decoration:none;
+
     font-weight:bold;
+
     border-radius:10px;
 }
 
 .back:hover{
     background:#00cc52;
+
     box-shadow:0 0 15px #00ff66;
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
-    <h1 id="title">⚙️ Settings</h1>
+
+<h1 id="title">
+⚙️ Settings
+</h1>
+
 </header>
+
 
 <div class="container">
 
-    <div class="setting">
 
-        <h2 id="languageTitle">🌐 Language</h2>
+<div class="setting">
 
-        <div class="languages">
+<h2 id="languageTitle">
+🌐 Language
+</h2>
 
-            <button class="language" onclick="changeLanguage('ru', this)">
-                🇷🇺 Русский
-            </button>
 
-            <button class="language" onclick="changeLanguage('en', this)">
-                🇬🇧 English
-            </button>
+<div class="languages">
 
-            <button class="language" onclick="changeLanguage('uk', this)">
-                🇺🇦 Українська
-            </button>
 
-        </div>
+<button
+class="language"
+data-language="ru"
+onclick="changeLanguage('ru')">
 
-    </div>
+🇷🇺 Русский
 
-    <a class="back" id="backButton" href="index.html">
-        🏠 Home
-    </a>
+</button>
+
+
+<button
+class="language"
+data-language="en"
+onclick="changeLanguage('en')">
+
+🇬🇧 English
+
+</button>
+
+
+<button
+class="language"
+data-language="uk"
+onclick="changeLanguage('uk')">
+
+🇺🇦 Українська
+
+</button>
+
 
 </div>
 
+</div>
+
+
+<a
+class="back"
+id="backButton"
+href="index.html">
+
+🏠 Home
+
+</a>
+
+
+</div>
+
+
 <script>
+
+/* =================================
+   🌐 ЯЗЫКИ
+================================= */
 
 const translations = {
 
-    en:{
-        title:"⚙️ Settings",
-        language:"🌐 Language",
-        back:"🏠 Home"
-    },
+en:{
+    title:"⚙️ Settings",
+    language:"🌐 Language",
+    back:"🏠 Home"
+},
 
-    ru:{
-        title:"⚙️ Настройки",
-        language:"🌐 Язык",
-        back:"🏠 На главную"
-    },
+ru:{
+    title:"⚙️ Настройки",
+    language:"🌐 Язык",
+    back:"🏠 На главную"
+},
 
-    uk:{
-        title:"⚙️ Налаштування",
-        language:"🌐 Мова",
-        back:"🏠 На головну"
-    }
+uk:{
+    title:"⚙️ Налаштування",
+    language:"🌐 Мова",
+    back:"🏠 На головну"
+}
 
 };
 
 
-function changeLanguage(language, button){
+/* =================================
+   🔐 КЛЮЧ ЯЗЫКА
+================================= */
 
-    /* Сохраняем выбранный язык */
-
-    localStorage.setItem("siteLanguage", language);
-
-    /* Меняем текст */
-
-    applyLanguage(language);
-
-    /* Меняем активную кнопку */
-
-    document.querySelectorAll(".language").forEach(function(btn){
-        btn.classList.remove("active");
-    });
-
-    button.classList.add("active");
-}
+const LANGUAGE_KEY = "siteLanguage";
 
 
-function applyLanguage(language){
+/* =================================
+   🌐 ПОЛУЧИТЬ ЯЗЫК
+================================= */
 
-    const data = translations[language];
+function getLanguage(){
 
-    document.getElementById("title").textContent = data.title;
+    let language =
+        localStorage.getItem(LANGUAGE_KEY);
 
-    document.getElementById("languageTitle").textContent = data.language;
-
-    document.getElementById("backButton").textContent = data.back;
-}
-
-
-/* При первом входе язык = English */
-
-let savedLanguage = localStorage.getItem("siteLanguage");
-
-if(!savedLanguage){
-
-    savedLanguage = "en";
-
-    localStorage.setItem("siteLanguage","en");
-}
-
-
-/* Показываем сохранённый язык */
-
-applyLanguage(savedLanguage);
-
-
-/* Показываем выбранную кнопку */
-
-document.querySelectorAll(".language").forEach(function(button){
 
     if(
-        (savedLanguage === "ru" && button.textContent.includes("Русский")) ||
-        (savedLanguage === "en" && button.textContent.includes("English")) ||
-        (savedLanguage === "uk" && button.textContent.includes("Українська"))
+        language !== "ru" &&
+        language !== "en" &&
+        language !== "uk"
     ){
 
-        button.classList.add("active");
+        language = "en";
+
+        localStorage.setItem(
+            LANGUAGE_KEY,
+            language
+        );
 
     }
 
-});
+
+    return language;
+
+}
+
+
+/* =================================
+   🌐 ПРИМЕНИТЬ ЯЗЫК
+================================= */
+
+function applyLanguage(language){
+
+    const data =
+        translations[language] ||
+        translations.en;
+
+
+    document.getElementById("title")
+        .textContent = data.title;
+
+
+    document.getElementById("languageTitle")
+        .textContent = data.language;
+
+
+    document.getElementById("backButton")
+        .textContent = data.back;
+
+
+    document.documentElement.lang =
+        language;
+
+
+    /* Активная кнопка */
+
+    document.querySelectorAll(
+        ".language"
+    ).forEach(function(button){
+
+        button.classList.remove("active");
+
+
+        if(
+            button.dataset.language ===
+            language
+        ){
+
+            button.classList.add("active");
+
+        }
+
+    });
+
+}
+
+
+/* =================================
+   🔄 СМЕНА ЯЗЫКА
+================================= */
+
+function changeLanguage(language){
+
+    /* Сохраняем */
+
+    localStorage.setItem(
+        LANGUAGE_KEY,
+        language
+    );
+
+
+    /* Применяем здесь */
+
+    applyLanguage(language);
+
+
+    /* Сообщаем другим страницам */
+
+    window.dispatchEvent(
+        new CustomEvent(
+            "languageChanged",
+            {
+                detail:{
+                    language:language
+                }
+            }
+        )
+    );
+
+}
+
+
+/* =================================
+   🚀 ПЕРВЫЙ ЗАПУСК
+================================= */
+
+const savedLanguage =
+    getLanguage();
+
+
+applyLanguage(
+    savedLanguage
+);
+
+
+/* =================================
+   🔄 ЕСЛИ СТРАНИЦА ВЕРНУЛАСЬ НАЗАД
+================================= */
+
+window.addEventListener(
+    "pageshow",
+    function(){
+
+        applyLanguage(
+            getLanguage()
+        );
+
+    }
+);
+
+
+/* =================================
+   🌐 ИЗМЕНЕНИЕ ИЗ ДРУГОЙ ВКЛАДКИ
+================================= */
+
+window.addEventListener(
+    "storage",
+    function(event){
+
+        if(
+            event.key === LANGUAGE_KEY
+        ){
+
+            applyLanguage(
+                getLanguage()
+            );
+
+        }
+
+    }
+);
 
 </script>
 
+
 </body>
-</html>
+
+    </html>
+
