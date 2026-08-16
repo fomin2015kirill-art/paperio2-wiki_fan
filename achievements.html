@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Achievements — Paper.io 2 Wiki Fan</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#050505;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:#080808;
+    padding:25px 15px;
+    border-bottom:2px solid #00ff66;
+    box-shadow:0 0 20px #00ff6633;
+}
+
+h1{
+    margin:0;
+    color:#00ff66;
+    font-size:30px;
+    text-shadow:0 0 10px #00ff66;
+}
+
+.container{
+    max-width:700px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.subtitle{
+    color:#ccc;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.difficulty{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    margin:15px 0;
+    padding:20px;
+    background:#0b0b0b;
+    color:white;
+    text-decoration:none;
+    border:2px solid #00ff66;
+    border-radius:16px;
+    font-size:22px;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.difficulty:hover{
+    transform:scale(1.04);
+    background:#00ff66;
+    color:#000;
+    box-shadow:0 0 25px #00ff66;
+}
+
+.easy{
+    border-color:#00ff66;
+}
+
+.normal{
+    border-color:#00aaff;
+}
+
+.hard{
+    border-color:#ff9900;
+}
+
+.expert{
+    border-color:#ff3333;
+}
+
+.impossible{
+    border-color:#aa00ff;
+}
+
+.back{
+    display:inline-block;
+    margin-top:25px;
+    padding:13px 22px;
+    background:#00ff66;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+.back:hover{
+    box-shadow:0 0 18px #00ff66;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1 id="title">
+🏆 Achievements
+</h1>
+
+</header>
+
+
+<div class="container">
+
+<p class="subtitle" id="subtitle">
+Choose achievement difficulty
+</p>
+
+
+<a
+href="easy.html"
+class="difficulty easy"
+id="easy">
+
+🟢 Easy
+
+</a>
+
+
+<a
+href="normal.html"
+class="difficulty normal"
+id="normal">
+
+🔵 Normal
+
+</a>
+
+
+<a
+href="hard.html"
+class="difficulty hard"
+id="hard">
+
+🟠 Hard
+
+</a>
+
+
+<a
+href="expert.html"
+class="difficulty expert"
+id="expert">
+
+🔴 Expert
+
+</a>
+
+
+<a
+href="impossible.html"
+class="difficulty impossible"
+id="impossible">
+
+💀 Impossible
+
+</a>
+
+
+<br>
+
+
+<a
+href="index.html"
+class="back"
+id="back">
+
+🏠 Home
+
+</a>
+
+</div>
+
+
+<script>
+
+/* =========================
+   🌐 ЯЗЫК
+========================= */
+
+const translations = {
+
+en:{
+
+title:"🏆 Achievements",
+
+subtitle:"Choose achievement difficulty",
+
+easy:"🟢 Easy",
+
+normal:"🔵 Normal",
+
+hard:"🟠 Hard",
+
+expert:"🔴 Expert",
+
+impossible:"💀 Impossible",
+
+back:"🏠 Home"
+
+},
+
+ru:{
+
+title:"🏆 Достижения",
+
+subtitle:"Выберите сложность достижений",
+
+easy:"🟢 Легко",
+
+normal:"🔵 Нормально",
+
+hard:"🟠 Сложно",
+
+expert:"🔴 Эксперт",
+
+impossible:"💀 Невозможно",
+
+back:"🏠 На главную"
+
+},
+
+uk:{
+
+title:"🏆 Досягнення",
+
+subtitle:"Оберіть складність досягнень",
+
+easy:"🟢 Легко",
+
+normal:"🔵 Нормально",
+
+hard:"🟠 Складно",
+
+expert:"🔴 Експерт",
+
+impossible:"💀 Неможливо",
+
+back:"🏠 На головну"
+
+}
+
+};
+
+
+/* =========================
+   ПОЛУЧАЕМ ЯЗЫК
+========================= */
+
+function getLanguage(){
+
+let language =
+localStorage.getItem("siteLanguage");
+
+if(
+language !== "en" &&
+language !== "ru" &&
+language !== "uk"
+){
+
+language="en";
+
+}
+
+return language;
+
+}
+
+
+/* =========================
+   ПРИМЕНЯЕМ
+========================= */
+
+function applyLanguage(){
+
+const language =
+getLanguage();
+
+const t =
+translations[language];
+
+
+document.getElementById("title")
+.textContent=t.title;
+
+document.getElementById("subtitle")
+.textContent=t.subtitle;
+
+document.getElementById("easy")
+.textContent=t.easy;
+
+document.getElementById("normal")
+.textContent=t.normal;
+
+document.getElementById("hard")
+.textContent=t.hard;
+
+document.getElementById("expert")
+.textContent=t.expert;
+
+document.getElementById("impossible")
+.textContent=t.impossible;
+
+document.getElementById("back")
+.textContent=t.back;
+
+document.documentElement.lang =
+language;
+
+}
+
+
+/* =========================
+   ЗАПУСК
+========================= */
+
+applyLanguage();
+
+
+/* Если вернулись назад */
+
+window.addEventListener(
+"pageshow",
+function(){
+
+applyLanguage();
+
+});
+
+
+</script>
+
+</body>
+
+  </html>
