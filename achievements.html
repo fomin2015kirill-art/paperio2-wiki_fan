@@ -2,11 +2,8 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Achievements — Paper.io 2 Wiki Fan</title>
 
@@ -18,6 +15,46 @@ body{
     background:#050505;
     color:white;
     text-align:center;
+    transition:.3s;
+}
+
+/* ===== ADMIN SECRET ANIMATION ===== */
+
+body.admin-secret{
+    animation:adminFlash 1.4s forwards;
+}
+
+@keyframes adminFlash{
+
+    0%{
+        background:#050505;
+        filter:none;
+    }
+
+    20%{
+        background:#111;
+        filter:brightness(1.5) saturate(2);
+    }
+
+    40%{
+        background:#201000;
+        filter:brightness(2) saturate(4);
+    }
+
+    60%{
+        background:#302000;
+        filter:brightness(2.5) saturate(6);
+    }
+
+    80%{
+        background:#111;
+        filter:brightness(3) saturate(8);
+    }
+
+    100%{
+        background:#050505;
+        filter:none;
+    }
 }
 
 header{
@@ -105,7 +142,6 @@ h1{
 }
 
 </style>
-
 </head>
 
 <body>
@@ -118,16 +154,13 @@ h1{
 
 </header>
 
-
 <div class="container">
 
 <p class="subtitle" id="subtitle">
 Choose achievement difficulty
 </p>
 
-
-<a
-href="easy.html"
+<a href="easy.html"
 class="difficulty easy"
 id="easy">
 
@@ -135,9 +168,7 @@ id="easy">
 
 </a>
 
-
-<a
-href="normal.html"
+<a href="normal.html"
 class="difficulty normal"
 id="normal">
 
@@ -145,9 +176,7 @@ id="normal">
 
 </a>
 
-
-<a
-href="hard.html"
+<a href="hard.html"
 class="difficulty hard"
 id="hard">
 
@@ -155,9 +184,7 @@ id="hard">
 
 </a>
 
-
-<a
-href="expert.html"
+<a href="expert.html"
 class="difficulty expert"
 id="expert">
 
@@ -165,9 +192,7 @@ id="expert">
 
 </a>
 
-
-<a
-href="impossible.html"
+<a href="impossible.html"
 class="difficulty impossible"
 id="impossible">
 
@@ -175,12 +200,9 @@ id="impossible">
 
 </a>
 
-
 <br>
 
-
-<a
-href="index.html"
+<a href="index.html"
 class="back"
 id="back">
 
@@ -190,80 +212,52 @@ id="back">
 
 </div>
 
-
 <script>
 
 /* =========================
-   🌐 ЯЗЫК
+   🌐 ПЕРЕВОД
 ========================= */
 
 const translations = {
 
 en:{
-
 title:"🏆 Achievements",
-
 subtitle:"Choose achievement difficulty",
-
 easy:"🟢 Easy",
-
 normal:"🔵 Normal",
-
 hard:"🟠 Hard",
-
 expert:"🔴 Expert",
-
 impossible:"💀 Impossible",
-
 back:"🏠 Home"
-
 },
 
 ru:{
-
 title:"🏆 Достижения",
-
 subtitle:"Выберите сложность достижений",
-
 easy:"🟢 Легко",
-
 normal:"🔵 Нормально",
-
 hard:"🟠 Сложно",
-
 expert:"🔴 Эксперт",
-
 impossible:"💀 Невозможно",
-
 back:"🏠 На главную"
-
 },
 
 uk:{
-
 title:"🏆 Досягнення",
-
 subtitle:"Оберіть складність досягнень",
-
 easy:"🟢 Легко",
-
 normal:"🔵 Нормально",
-
 hard:"🟠 Складно",
-
 expert:"🔴 Експерт",
-
 impossible:"💀 Неможливо",
-
 back:"🏠 На головну"
-
 }
 
 };
 
 
 /* =========================
-   ПОЛУЧАЕМ ЯЗЫК
+   🌐 ЯЗЫК
 ========================= */
 
 function getLanguage(){
@@ -276,28 +270,17 @@ language !== "en" &&
 language !== "ru" &&
 language !== "uk"
 ){
-
 language="en";
-
 }
 
 return language;
-
 }
 
 
-/* =========================
-   ПРИМЕНЯЕМ
-========================= */
-
 function applyLanguage(){
 
-const language =
-getLanguage();
-
 const t =
-translations[language];
-
+translations[getLanguage()];
 
 document.getElementById("title")
 .textContent=t.title;
@@ -324,31 +307,63 @@ document.getElementById("back")
 .textContent=t.back;
 
 document.documentElement.lang =
-language;
+getLanguage();
 
 }
 
-
-/* =========================
-   ЗАПУСК
-========================= */
-
 applyLanguage();
-
-
-/* Если вернулись назад */
 
 window.addEventListener(
 "pageshow",
-function(){
+applyLanguage
+);
 
-applyLanguage();
 
-});
+/* =========================
+   👑 SECRET ADMIN
+========================= */
 
+let adminClicks=0;
+let adminTimer=null;
+
+
+/*
+   Эта функция вызывается
+   с кнопки "Достижения"
+   на главной странице.
+*/
+
+function openAdmin(){
+
+adminClicks++;
+
+clearTimeout(adminTimer);
+
+adminTimer=setTimeout(function(){
+
+adminClicks=0;
+
+},800);
+
+if(adminClicks===2){
+
+adminClicks=0;
+
+document.body.classList.add(
+"admin-secret"
+);
+
+setTimeout(function(){
+
+window.location.href="admin.html";
+
+},1400);
+
+}
+
+}
 
 </script>
 
 </body>
-
-  </html>
+</html>
