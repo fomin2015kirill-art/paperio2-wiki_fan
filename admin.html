@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>ADMIN — Paper.io 2 Wiki Fan</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#050505;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:#080808;
+    padding:30px 15px;
+    border-bottom:2px solid #ffaa00;
+    box-shadow:0 0 25px #ffaa0044;
+}
+
+h1{
+    margin:0;
+    color:#ffaa00;
+    font-size:32px;
+    text-shadow:
+        0 0 10px #ffaa00,
+        0 0 25px #ffaa00;
+}
+
+.subtitle{
+    color:#ccc;
+    font-size:17px;
+    margin-top:12px;
+}
+
+.container{
+    max-width:750px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.goal{
+    display:flex;
+    align-items:center;
+    text-align:left;
+    gap:15px;
+
+    background:#0b0b0b;
+    border:1px solid #ffaa00;
+    border-radius:16px;
+
+    padding:18px;
+    margin-bottom:14px;
+
+    box-shadow:0 0 12px #ffaa0018;
+}
+
+.goal input{
+    width:24px;
+    height:24px;
+    cursor:pointer;
+    accent-color:#ffaa00;
+    flex-shrink:0;
+}
+
+.goal-text{
+    font-size:18px;
+    font-weight:bold;
+    line-height:1.4;
+}
+
+.goal.done .goal-text{
+    text-decoration:line-through;
+    opacity:.5;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 22px;
+
+    background:#ffaa00;
+    color:#000;
+
+    text-decoration:none;
+    font-weight:bold;
+
+    border-radius:10px;
+}
+
+.back:hover{
+    box-shadow:0 0 20px #ffaa00;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1 id="title">
+👑 ADMIN
+</h1>
+
+<div class="subtitle" id="subtitle">
+Secret personal goals
+</div>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="countries">
+<div class="goal-text"
+data-key="countries">
+🌍 Collect all 148 countries
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="characters">
+<div class="goal-text"
+data-key="characters">
+👤 Unlock all characters
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="maxCharacters">
+<div class="goal-text"
+data-key="maxCharacters">
+⬆️ Max all characters
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="skins">
+<div class="goal-text"
+data-key="skins">
+🎨 Collect all skins
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="maxLeague">
+<div class="goal-text"
+data-key="maxLeague">
+🏆 Reach the maximum league
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="coins">
+<div class="goal-text"
+data-key="coins">
+🪙 Earn 100,000,000 coins
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="gems">
+<div class="goal-text"
+data-key="gems">
+💎 Save 100,000 gems
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="kills">
+<div class="goal-text"
+data-key="kills">
+💀 Get 500,000 kills
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="wins">
+<div class="goal-text"
+data-key="wins">
+💯 Get 5,000 wins with 100% map capture
+</div>
+</div>
+
+
+<div class="goal">
+<input type="checkbox"
+data-goal="top1">
+<div class="goal-text"
+data-key="top1">
+🌎 Reach TOP 1 in the world
+</div>
+</div>
+
+
+<a href="achievements.html"
+class="back"
+id="back">
+
+🏆 Achievements
+
+</a>
+
+</div>
+
+
+<script>
+
+/* =========================
+   🌐 ПЕРЕВОД
+========================= */
+
+const translations={
+
+en:{
+title:"👑 ADMIN",
+subtitle:"Secret personal goals",
+
+countries:"🌍 Collect all 148 countries",
+characters:"👤 Unlock all characters",
+maxCharacters:"⬆️ Max all characters",
+skins:"🎨 Collect all skins",
+maxLeague:"🏆 Reach the maximum league",
+coins:"🪙 Earn 100,000,000 coins",
+gems:"💎 Save 100,000 gems",
+kills:"💀 Get 500,000 kills",
+wins:"💯 Get 5,000 wins with 100% map capture",
+top1:"🌎 Reach TOP 1 in the world",
+
+back:"🏆 Achievements"
+},
+
+ru:{
+title:"👑 АДМИН",
+subtitle:"Секретные личные цели",
+
+countries:"🌍 Собрать все 148 стран",
+characters:"👤 Разблокировать всех персонажей",
+maxCharacters:"⬆️ Прокачать всех персонажей до максимума",
+skins:"🎨 Собрать все скины",
+maxLeague:"🏆 Достичь максимальной лиги",
+coins:"🪙 Накопить 100 000 000 монет",
+gems:"💎 Накопить 100 000 гемов",
+kills:"💀 Сделать 500 000 киллов",
+wins:"💯 Сделать 5 000 побед со 100% захватом карты",
+top1:"🌎 Попасть в мировой ТОП-1",
+
+back:"🏆 Достижения"
+},
+
+uk:{
+title:"👑 АДМІН",
+subtitle:"Секретні особисті цілі",
+
+countries:"🌍 Зібрати всі 148 країн",
+characters:"👤 Розблокувати всіх персонажів",
+maxCharacters:"⬆️ Прокачати всіх персонажів до максимуму",
+skins:"🎨 Зібрати всі скіни",
+maxLeague:"🏆 Досягти максимальної ліги",
+coins:"🪙 Накопичити 100 000 000 монет",
+gems:"💎 Накопичити 100 000 гемів",
+kills:"💀 Зробити 500 000 кілів",
+wins:"💯 Зробити 5 000 перемог зі 100% захопленням карти",
+top1:"🌎 Потрапити у світовий ТОП-1",
+
+back:"🏆 Досягнення"
+}
+
+};
+
+
+/* =========================
+   🌐 ЯЗЫК
+========================= */
+
+function getLanguage(){
+
+let language=
+localStorage.getItem("siteLanguage");
+
+if(
+language!=="en" &&
+language!=="ru" &&
+language!=="uk"
+){
+
+language="en";
+
+}
+
+return language;
+
+}
+
+
+function applyLanguage(){
+
+const t=
+translations[getLanguage()];
+
+document.getElementById("title")
+.textContent=t.title;
+
+document.getElementById("subtitle")
+.textContent=t.subtitle;
+
+document.getElementById("back")
+.textContent=t.back;
+
+
+document.querySelectorAll(
+"[data-key]"
+).forEach(function(element){
+
+const key=
+element.getAttribute("data-key");
+
+element.textContent=t[key];
+
+});
+
+
+document.documentElement.lang=
+getLanguage();
+
+}
+
+
+/* =========================
+   ☑️ СОХРАНЕНИЕ ГАЛОЧЕК
+========================= */
+
+document.querySelectorAll(
+'input[type="checkbox"]'
+).forEach(function(box){
+
+const goal=
+box.getAttribute("data-goal");
+
+const saved=
+localStorage.getItem(
+"adminGoal_"+goal
+);
+
+if(saved==="true"){
+
+box.checked=true;
+
+box.closest(".goal")
+.classList.add("done");
+
+}
+
+
+box.addEventListener(
+"change",
+function(){
+
+localStorage.setItem(
+"adminGoal_"+goal,
+box.checked
+);
+
+if(box.checked){
+
+box.closest(".goal")
+.classList.add("done");
+
+}else{
+
+box.closest(".goal")
+.classList.remove("done");
+
+}
+
+});
+
+});
+
+
+applyLanguage();
+
+window.addEventListener(
+"pageshow",
+applyLanguage
+);
+
+</script>
+
+</body>
+  </html>
