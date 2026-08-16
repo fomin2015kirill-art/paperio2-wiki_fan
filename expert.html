@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expert — Paper.io 2 Wiki Fan</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#050505;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:#080808;
+    padding:25px 15px;
+    border-bottom:2px solid #b000ff;
+    box-shadow:0 0 20px #b000ff33;
+}
+
+header h1{
+    margin:0;
+    color:#b000ff;
+    font-size:30px;
+    text-shadow:0 0 10px #b000ff;
+}
+
+.container{
+    max-width:750px;
+    margin:25px auto;
+    padding:20px;
+}
+
+.subtitle{
+    color:#ccc;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.achievement{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#0b0b0b;
+    border:1px solid #b000ff;
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:15px;
+    text-align:left;
+    box-shadow:0 0 10px #b000ff18;
+    transition:.2s;
+}
+
+.achievement:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 18px #b000ff44;
+}
+
+.check{
+    width:27px;
+    height:27px;
+    accent-color:#b000ff;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.achievementInfo{
+    flex:1;
+}
+
+.achievementName{
+    color:#b000ff;
+    font-size:19px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.stats{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.people{
+    color:#c566ff;
+}
+
+.percent{
+    color:#d38aff;
+}
+
+.achievement.completed{
+    background:#160b1d;
+    border-color:#b000ff;
+}
+
+.achievement.completed .achievementName{
+    text-decoration:line-through;
+    opacity:.7;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 22px;
+    background:#b000ff;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+.back:hover{
+    box-shadow:0 0 18px #b000ff;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1 id="title">
+🟣 Expert
+</h1>
+
+</header>
+
+
+<div class="container">
+
+
+<p class="subtitle" id="subtitle">
+Expert — 5 achievements
+</p>
+
+
+<!-- 1000 KILLS -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement1"
+onchange="saveAchievement(1)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name1">
+
+💀 Get 1000 kills
+
+</div>
+
+<div class="stats">
+
+<span
+class="people"
+id="people1">
+👥 16 players
+</span>
+
+<br>
+
+<span
+class="percent"
+id="percent1">
+📊 8%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 10 DAYS -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement2"
+onchange="saveAchievement(2)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name2">
+
+📅 Play for 10 days in a row
+
+</div>
+
+<div class="stats">
+
+<span
+class="people"
+id="people2">
+👥 14 players
+</span>
+
+<br>
+
+<span
+class="percent"
+id="percent2">
+📊 7%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 7 CHARACTERS -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement3"
+onchange="saveAchievement(3)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name3">
+
+⬆️ Upgrade 7 characters to level 10
+
+</div>
+
+<div class="stats">
+
+<span
+class="people"
+id="people3">
+👥 10 players
+</span>
+
+<br>
+
+<span
+class="percent"
+id="percent3">
+📊 5%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ALL COUNTRIES -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement4"
+onchange="saveAchievement(4)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name4">
+
+🌍 Get all 148 countries
+
+</div>
+
+<div class="stats">
+
+<span
+class="people"
+id="people4">
+👥 12 players
+</span>
+
+<br>
+
+<span
+class="percent"
+id="percent4">
+📊 6%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MASTER 2 -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement5"
+onchange="saveAchievement(5)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name5">
+
+🔥 Reach Master 2
+
+</div>
+
+<div class="stats">
+
+<span
+class="people"
+id="people5">
+👥 18 players
+</span>
+
+<br>
+
+<span
+class="percent"
+id="percent5">
+📊 9%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<a
+href="achievements.html"
+class="back"
+id="back">
+
+🏆 Achievements
+
+</a>
+
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   🌐 ПЕРЕВОДЫ
+========================= */
+
+const translations = {
+
+en:{
+
+title:"🟣 Expert",
+
+subtitle:"Expert — 5 achievements",
+
+name1:"💀 Get 1000 kills",
+
+name2:"📅 Play for 10 days in a row",
+
+name3:"⬆️ Upgrade 7 characters to level 10",
+
+name4:"🌍 Get all 148 countries",
+
+name5:"🔥 Reach Master 2",
+
+back:"🏆 Achievements",
+
+players:"players"
+
+},
+
+
+ru:{
+
+title:"🟣 Эксперт",
+
+subtitle:"Эксперт — 5 достижений",
+
+name1:"💀 Сделать 1000 убийств",
+
+name2:"📅 Играть 10 дней подряд",
+
+name3:"⬆️ Прокачать 7 персонажей до 10 уровня",
+
+name4:"🌍 Получить все 148 стран",
+
+name5:"🔥 Дойти до Мастера 2",
+
+back:"🏆 Достижения",
+
+players:"игроков"
+
+},
+
+
+uk:{
+
+title:"🟣 Експерт",
+
+subtitle:"Експерт — 5 досягнень",
+
+name1:"💀 Зробити 1000 вбивств",
+
+name2:"📅 Грати 10 днів поспіль",
+
+name3:"⬆️ Прокачати 7 персонажів до 10 рівня",
+
+name4:"🌍 Отримати всі 148 країн",
+
+name5:"🔥 Дійти до Майстра 2",
+
+back:"🏆 Досягнення",
+
+players:"гравців"
+
+}
+
+};
+
+
+/* =========================
+   📊 СТАТИСТИКА
+========================= */
+
+const stats = [
+
+[16,8],
+[14,7],
+[10,5],
+[12,6],
+[18,9]
+
+];
+
+
+/* =========================
+   🌐 ПОЛУЧАЕМ ЯЗЫК
+========================= */
+
+function getLanguage(){
+
+    const saved =
+        localStorage.getItem("siteLanguage");
+
+    if(saved === "ru"){
+        return "ru";
+    }
+
+    if(saved === "uk"){
+        return "uk";
+    }
+
+    return "en";
+
+}
+
+
+/* =========================
+   🌐 ПРИМЕНЯЕМ ЯЗЫК
+========================= */
+
+function applyLanguage(){
+
+    const language =
+        getLanguage();
+
+    const t =
+        translations[language];
+
+
+    document.getElementById("title")
+        .textContent = t.title;
+
+
+    document.getElementById("subtitle")
+        .textContent = t.subtitle;
+
+
+    for(let i=1;i<=5;i++){
+
+        document.getElementById(
+            "name"+i
+        ).textContent =
+            t["name"+i];
+
+
+        document.getElementById(
+            "people"+i
+        ).textContent =
+            "👥 " +
+            stats[i-1][0] +
+            " " +
+            t.players;
+
+
+        document.getElementById(
+            "percent"+i
+        ).textContent =
+            "📊 " +
+            stats[i-1][1] +
+            "%";
+
+    }
+
+
+    document.getElementById("back")
+        .textContent = t.back;
+
+
+    document.documentElement.lang =
+        language;
+
+}
+
+
+/* =========================
+   ☑️ СОХРАНЕНИЕ
+========================= */
+
+function saveAchievement(number){
+
+    const checkbox =
+        document.getElementById(
+            "achievement"+number
+        );
+
+    localStorage.setItem(
+        "expertAchievement"+number,
+        checkbox.checked
+    );
+
+
+    const card =
+        checkbox.closest(
+            ".achievement"
+        );
+
+
+    if(checkbox.checked){
+
+        card.classList.add(
+            "completed"
+        );
+
+    }else{
+
+        card.classList.remove(
+            "completed"
+        );
+
+    }
+
+}
+
+
+/* =========================
+   ☑️ ЗАГРУЗКА
+========================= */
+
+function loadAchievements(){
+
+    for(let i=1;i<=5;i++){
+
+        const saved =
+            localStorage.getItem(
+                "expertAchievement"+i
+            );
+
+
+        const checkbox =
+            document.getElementById(
+                "achievement"+i
+            );
+
+
+        if(saved === "true"){
+
+            checkbox.checked = true;
+
+            checkbox
+                .closest(".achievement")
+                .classList.add(
+                    "completed"
+                );
+
+        }
+
+    }
+
+}
+
+
+/* =========================
+   🚀 ЗАПУСК
+========================= */
+
+applyLanguage();
+
+loadAchievements();
+
+
+window.addEventListener(
+    "pageshow",
+    function(){
+
+        applyLanguage();
+
+        loadAchievements();
+
+    }
+);
+
+
+/* Проверка языка */
+
+setInterval(function(){
+
+    applyLanguage();
+
+},500);
+
+
+</script>
+
+
+</body>
+
+</html>
