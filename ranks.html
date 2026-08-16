@@ -1,163 +1,282 @@
-
-
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ранги — Paper.io 2 Wiki Fan</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #050505;
-            color: white;
-        }
+<meta charset="UTF-8">
 
-        header {
-            background: #080808;
-            padding: 25px 15px;
-            text-align: center;
-            border-bottom: 2px solid #00ff66;
-            box-shadow: 0 0 15px #00ff6633;
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        h1 {
-            margin: 0;
-            color: #00ff66;
-            text-shadow: 0 0 10px #00ff66;
-        }
+<title>Ranks — Paper.io 2 Wiki Fan</title>
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
+<style>
 
-        .rank {
-            background: #0b0b0b;
-            border: 1px solid #00ff66;
-            border-radius: 14px;
-            padding: 18px;
-            margin-bottom: 14px;
-            box-shadow: 0 0 10px #00ff6618;
-        }
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#050505;
+    color:white;
+}
 
-        .rank:hover {
-            box-shadow: 0 0 18px #00ff6644;
-            transform: translateY(-2px);
-            transition: 0.2s;
-        }
+header{
+    background:#080808;
+    padding:25px 15px;
+    text-align:center;
+    border-bottom:2px solid #00ff66;
+    box-shadow:0 0 15px #00ff6633;
+}
 
-        .rank h2 {
-            margin: 0 0 8px;
-            color: #00ff66;
-        }
+h1{
+    margin:0;
+    color:#00ff66;
+    text-shadow:0 0 10px #00ff66;
+}
 
-        .hp {
-            color: #00ff66;
-            font-weight: bold;
-            font-size: 17px;
-        }
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:20px;
+}
 
-        .percent {
-            color: #00ff66;
-            margin-top: 7px;
-            font-weight: bold;
-        }
+.rank{
+    background:#0b0b0b;
+    border:1px solid #00ff66;
+    border-radius:14px;
+    padding:18px;
+    margin-bottom:14px;
+    box-shadow:0 0 10px #00ff6618;
+    transition:.2s;
+}
 
-        .back {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 12px 20px;
-            background: #00ff66;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 10px;
-            box-shadow: 0 0 12px #00ff6655;
-        }
+.rank:hover{
+    box-shadow:0 0 18px #00ff6644;
+    transform:translateY(-2px);
+}
 
-        .back:hover {
-            background: #00cc52;
-            box-shadow: 0 0 18px #00ff6688;
-        }
-    </style>
+.rank h2{
+    margin:0 0 8px;
+    color:#00ff66;
+}
+
+.hp{
+    color:#00ff66;
+    font-weight:bold;
+    font-size:17px;
+}
+
+.percent{
+    color:#00ff66;
+    margin-top:7px;
+    font-weight:bold;
+}
+
+.back{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 20px;
+    background:#00ff66;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    box-shadow:0 0 12px #00ff6655;
+}
+
+.back:hover{
+    background:#00cc52;
+    box-shadow:0 0 18px #00ff6688;
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <header>
-    <h1>🏆 Ранги Paper.io 2</h1>
+
+<h1 id="pageTitle">
+🏆 Ranks — Paper.io 2
+</h1>
+
 </header>
+
 
 <div class="container">
 
-    <div class="rank"><h2>🥉 Бронза 2</h2><div class="hp">720 HP</div></div>
-    <div class="rank"><h2>🥉 Бронза 3</h2><div class="hp">1 548 HP</div></div>
 
-    <div class="rank"><h2>🥈 Серебро 1</h2><div class="hp">2 620 HP</div></div>
-    <div class="rank"><h2>🥈 Серебро 2</h2><div class="hp">3 860 HP</div></div>
-    <div class="rank"><h2>🥈 Серебро 3</h2><div class="hp">5 350 HP</div></div>
-
-    <div class="rank"><h2>🥇 Золото 1</h2><div class="hp">7 140 HP</div></div>
-    <div class="rank"><h2>🥇 Золото 2</h2><div class="hp">9 290 HP</div></div>
-    <div class="rank"><h2>🥇 Золото 3</h2><div class="hp">11 970 HP</div></div>
-
-    <div class="rank"><h2>🔷 Платина 1</h2><div class="hp">14 970 HP</div></div>
-    <div class="rank"><h2>🔷 Платина 2</h2><div class="hp">18 690 HP</div></div>
-    <div class="rank"><h2>🔷 Платина 3</h2><div class="hp">23 150 HP</div></div>
-
-    <div class="rank"><h2>💎 Алмаз 1</h2><div class="hp">28 500 HP</div></div>
-    <div class="rank"><h2>💎 Алмаз 2</h2><div class="hp">34 920 HP</div></div>
-    <div class="rank"><h2>💎 Алмаз 3</h2><div class="hp">42 620 HP</div></div>
-
-    <div class="rank"><h2>👑 Элита 1</h2><div class="hp">51 860 HP</div></div>
-    <div class="rank"><h2>👑 Элита 2</h2><div class="hp">62 950 HP</div></div>
-    <div class="rank"><h2>👑 Элита 3</h2><div class="hp">76 260 HP</div></div>
-
-    <div class="rank"><h2>🔥 Мастер 1</h2><div class="hp">92 230 HP</div></div>
-    <div class="rank"><h2>🔥 Мастер 2</h2><div class="hp">114 000 HP</div></div>
-    <div class="rank"><h2>🔥 Мастер 3</h2><div class="hp">134 400 HP</div></div>
-
-    <div class="rank">
-        <h2>🏆 Чемпион 1</h2>
-        <div class="hp">162 000 HP</div>
-    </div>
-
-    <div class="rank">
-        <h2>🏆 Чемпион 2</h2>
-        <div class="hp">195 120 HP</div>
-    </div>
-
-    <div class="rank">
-        <h2>🏆 Чемпион 3</h2>
-        <div class="hp">234 878 HP</div>
-        <div class="percent">⚡ Только 12% игроков</div>
-    </div>
-
-    <div class="rank">
-        <h2>🌟 Легенда 1</h2>
-        <div class="hp">282 570 HP</div>
-        <div class="percent">🔥 Только 9% игроков</div>
-    </div>
-
-    <div class="rank">
-        <h2>🌟 Легенда 2</h2>
-        <div class="hp">339 810 HP</div>
-        <div class="percent">🔥 Только 5% игроков</div>
-    </div>
-
-    <div class="rank">
-        <h2>🌟 Легенда 3</h2>
-        <div class="hp">408 490 HP</div>
-        <div class="percent">💀 Только 1% игроков</div>
-    </div>
-
-    <a class="back" href="index.html">🏠 На главную</a>
-
+<div class="rank">
+<h2>🥉 <span data-rank="bronze2">Bronze 2</span></h2>
+<div class="hp">720 HP</div>
 </div>
 
-</body>
-                                              </html>
+
+<div class="rank">
+<h2>🥉 <span data-rank="bronze3">Bronze 3</span></h2>
+<div class="hp">1 548 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🥈 <span data-rank="silver1">Silver 1</span></h2>
+<div class="hp">2 620 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🥈 <span data-rank="silver2">Silver 2</span></h2>
+<div class="hp">3 860 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🥈 <span data-rank="silver3">Silver 3</span></h2>
+<div class="hp">5 350 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🥇 <span data-rank="gold1">Gold 1</span></h2>
+<div class="hp">7 140 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🥇 <span data-rank="gold2">Gold 2</span></h2>
+<div class="hp">9 290 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🥇 <span data-rank="gold3">Gold 3</span></h2>
+<div class="hp">11 970 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🔷 <span data-rank="platinum1">Platinum 1</span></h2>
+<div class="hp">14 970 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🔷 <span data-rank="platinum2">Platinum 2</span></h2>
+<div class="hp">18 690 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🔷 <span data-rank="platinum3">Platinum 3</span></h2>
+<div class="hp">23 150 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>💎 <span data-rank="diamond1">Diamond 1</span></h2>
+<div class="hp">28 500 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>💎 <span data-rank="diamond2">Diamond 2</span></h2>
+<div class="hp">34 920 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>💎 <span data-rank="diamond3">Diamond 3</span></h2>
+<div class="hp">42 620 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>👑 <span data-rank="elite1">Elite 1</span></h2>
+<div class="hp">51 860 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>👑 <span data-rank="elite2">Elite 2</span></h2>
+<div class="hp">62 950 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>👑 <span data-rank="elite3">Elite 3</span></h2>
+<div class="hp">76 260 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🔥 <span data-rank="master1">Master 1</span></h2>
+<div class="hp">92 230 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🔥 <span data-rank="master2">Master 2</span></h2>
+<div class="hp">114 000 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🔥 <span data-rank="master3">Master 3</span></h2>
+<div class="hp">134 400 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🏆 <span data-rank="champion1">Champion 1</span></h2>
+<div class="hp">162 000 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🏆 <span data-rank="champion2">Champion 2</span></h2>
+<div class="hp">195 120 HP</div>
+</div>
+
+
+<div class="rank">
+<h2>🏆 <span data-rank="champion3">Champion 3</span></h2>
+<div class="hp">234 878 HP</div>
+<div class="percent" data-percent="champion3">
+⚡ Only 12% of players
+</div>
+</div>
+
+
+<div class="rank">
+<h2>🌟 <span data-rank="legend1">Legend 1</span></h2>
+<div class="hp">282 570 HP</div>
+<div class="percent" data-percent="legend1">
+🔥 Only 9% of players
+</div>
+</div>
+
+
+<div class="rank">
+<h2>🌟 <span data-rank="legend2">Legend 2</span></h2>
+<div class="hp">339 810 HP</div>
+<div class="percent" data-percent="legend2">
+🔥 Only 5% of players
+</div>
+</div>
+
+
+<div class="rank">
+<h2>🌟 <span data-rank="legend3">Legend 3</span></h2>
+<div class="hp">408 490 HP</div>
+<div class="percent" data-percent="legend3">
+💀 Only 1% of players
+</div>
+</div>
+
+
+<a class="back"
+href="index.html"
+id="back
+                                              >
