@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Easy Achievements — Paper.io 2 Wiki Fan</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#050505;
+    color:white;
+    text-align:center;
+}
+
+header{
+    background:#080808;
+    padding:25px 15px;
+    border-bottom:2px solid #00ff66;
+    box-shadow:0 0 20px #00ff6633;
+}
+
+header h1{
+    margin:0;
+    color:#00ff66;
+    font-size:30px;
+    text-shadow:0 0 10px #00ff66;
+}
+
+.container{
+    max-width:750px;
+    margin:25px auto;
+    padding:20px;
+}
+
+.subtitle{
+    color:#ccc;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.achievement{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:#0b0b0b;
+
+    border:1px solid #00ff66;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    text-align:left;
+
+    box-shadow:0 0 10px #00ff6618;
+
+    transition:.2s;
+}
+
+.achievement:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 18px #00ff6644;
+}
+
+
+/* =========================
+   ГАЛОЧКА
+========================= */
+
+.check{
+
+    width:28px;
+    height:28px;
+
+    accent-color:#00ff66;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+}
+
+
+/* =========================
+   ТЕКСТ
+========================= */
+
+.achievementInfo{
+    flex:1;
+}
+
+.achievementName{
+
+    color:#00ff66;
+
+    font-size:19px;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+.stats{
+
+    color:#aaa;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+.people{
+    color:#00ccff;
+}
+
+.percent{
+    color:#ffaa00;
+}
+
+
+/* =========================
+   ВЫПОЛНЕНО
+========================= */
+
+.achievement.completed{
+
+    border-color:#00ff66;
+
+    background:#071a0d;
+
+}
+
+.achievement.completed
+.achievementName{
+
+    text-decoration:line-through;
+
+    opacity:.7;
+
+}
+
+
+/* =========================
+   НАЗАД
+========================= */
+
+.back{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:13px 22px;
+
+    background:#00ff66;
+
+    color:#000;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-radius:10px;
+
+}
+
+.back:hover{
+
+    background:#00cc52;
+
+    box-shadow:0 0 18px #00ff66;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:500px){
+
+    .achievement{
+        padding:15px;
+    }
+
+    .achievementName{
+        font-size:17px;
+    }
+
+    .stats{
+        font-size:13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1 id="title">
+🏆 Easy Achievements
+</h1>
+
+</header>
+
+
+<div class="container">
+
+<p class="subtitle" id="subtitle">
+Easy level — 7 achievements
+</p>
+
+
+<!-- =========================
+     1
+========================= -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement1"
+onchange="saveAchievement(1)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name1">
+
+🎨 Paint 50% of the map
+
+</div>
+
+<div class="stats">
+
+<span class="people"
+id="people1">
+👥 68,420 players
+</span>
+
+<br>
+
+<span class="percent"
+id="percent1">
+📊 42.8%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     2
+========================= -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement2"
+onchange="saveAchievement(2)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name2">
+
+💯 Paint 100% of the map
+
+</div>
+
+<div class="stats">
+
+<span class="people"
+id="people2">
+👥 12,840 players
+</span>
+
+<br>
+
+<span class="percent"
+id="percent2">
+📊 8.1%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     3
+========================= -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement3"
+onchange="saveAchievement(3)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name3">
+
+💀 Kill 50 players
+
+</div>
+
+<div class="stats">
+
+<span class="people"
+id="people3">
+👥 51,730 players
+</span>
+
+<br>
+
+<span class="percent"
+id="percent3">
+📊 32.4%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     4
+========================= -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement4"
+onchange="saveAchievement(4)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name4">
+
+⚔️ Get 4 kills in one game
+
+</div>
+
+<div class="stats">
+
+<span class="people"
+id="people4">
+👥 24,610 players
+</span>
+
+<br>
+
+<span class="percent"
+id="percent4">
+📊 15.4%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     5
+========================= -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement5"
+onchange="saveAchievement(5)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name5">
+
+🥇 Reach Gold 1 league
+
+</div>
+
+<div class="stats">
+
+<span class="people"
+id="people5">
+👥 31,280 players
+</span>
+
+<br>
+
+<span class="percent"
+id="percent5">
+📊 19.6%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     6
+========================= -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement6"
+onchange="saveAchievement(6)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name6">
+
+📅 Play for 3 days in a row
+
+</div>
+
+<div class="stats">
+
+<span class="people"
+id="people6">
+👥 18,950 players
+</span>
+
+<br>
+
+<span class="percent"
+id="percent6">
+📊 11.9%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     7
+========================= -->
+
+<div class="achievement">
+
+<input
+type="checkbox"
+class="check"
+id="achievement7"
+onchange="saveAchievement(7)"
+>
+
+<div class="achievementInfo">
+
+<div
+class="achievementName"
+id="name7">
+
+🪙 Collect 1,000 coins
+
+</div>
+
+<div class="stats">
+
+<span class="people"
+id="people7">
+👥 74,320 players
+</span>
+
+<br>
+
+<span class="percent"
+id="percent7">
+📊 46.6%
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<a
+href="achievements.html"
+class="back"
+id="back">
+
+🏆 Achievements
+
+</a>
+
+</div>
+
+
+<script>
+
+/* =========================
+   🌐 ПЕРЕВОДЫ
+========================= */
+
+const translations = {
+
+en:{
+
+title:"🏆 Easy Achievements",
+
+subtitle:"Easy level — 7 achievements",
+
+name1:"🎨 Paint 50% of the map",
+name2:"💯 Paint 100% of the map",
+name3:"💀 Kill 50 players",
+name4:"⚔️ Get 4 kills in one game",
+name5:"🥇 Reach Gold 1 league",
+name6:"📅 Play for 3 days in a row",
+name7:"🪙 Collect 1,000 coins",
+
+back:"🏆 Achievements"
+
+},
+
+ru:{
+
+title:"🏆 Лёгкие достижения",
+
+subtitle:"Лёгкий уровень — 7 достижений",
+
+name1:"🎨 Закрасить 50% карты",
+name2:"💯 Закрасить 100% карты",
+name3:"💀 Убить 50 игроков",
+name4:"⚔️ Сделать 4 убийства за одну игру",
+name5:"🥇 Достичь лиги Золото 1",
+name6:"📅 Играть 3 дня подряд",
+name7:"🪙 Накопить 1 000 монет",
+
+back:"🏆 Достижения"
+
+},
+
+uk:{
+
+title:"🏆 Легкі досягнення",
+
+subtitle:"Легкий рівень — 7 досягнень",
+
+name1:"🎨 Зафарбувати 50% карти",
+name2:"💯 Зафарбувати 100% карти",
+name3:"💀 Вбити 50 гравців",
+name4:"⚔️ Зробити 4 вбивства за одну гру",
+name5:"🥇 Досягти ліги Золото 1",
+name6:"📅 Грати 3 дні поспіль",
+name7:"🪙 Накопичити 1 000 монет",
+
+back:"🏆 Досягнення"
+
+}
+
+};
+
+
+/* =========================
+   👥 СТАТИСТИКА
+========================= */
+
+const stats = [
+
+["68,420","42.8%"],
+["12,840","8.1%"],
+["51,730","32.4%"],
+["24,610","15.4%"],
+["31,280","19.6%"],
+["18,950","11.9%"],
+["74,320","46.6%"]
+
+];
+
+
+/* =========================
+   🌐 ЯЗЫК
+========================= */
+
+function getLanguage(){
+
+let language =
+localStorage.getItem("siteLanguage");
+
+if(
+language !== "en" &&
+language !== "ru" &&
+language !== "uk"
+){
+
+language="en";
+
+}
+
+return language;
+
+}
+
+
+/* =========================
+   🌐 ПРИМЕНИТЬ ЯЗЫК
+========================= */
+
+function applyLanguage(){
+
+const language =
+getLanguage();
+
+const t =
+translations[language];
+
+
+document.getElementById("title")
+.textContent=t.title;
+
+
+document.getElementById("subtitle")
+.textContent=t.subtitle;
+
+
+for(let i=1;i<=7;i++){
+
+document.getElementById(
+"name"+i
+).textContent=t["name"+i];
+
+}
+
+
+/* Текст статистики */
+
+for(let i=0;i<7;i++){
+
+const number=i+1;
+
+document.getElementById(
+"people"+number
+).textContent=
+"👥 "+stats[i][0]+" players";
+
+
+document.getElementById(
+"percent"+number
+).textContent=
+"📊 "+stats[i][1];
+
+}
+
+
+/* Перевод статистики */
+
+if(language==="ru"){
+
+for(let i=1;i<=7;i++){
+
+document.getElementById(
+"people"+i
+).textContent=
+"👥 "+stats[i-1][0]+" игроков";
+
+}
+
+}
+
+if(language==="uk"){
+
+for(let i=1;i<=7;i++){
+
+document.getElementById(
+"people"+i
+).textContent=
+"👥 "+stats[i-1][0]+" гравців";
+
+}
+
+}
+
+
+document.getElementById("back")
+.textContent=t.back;
+
+
+document.documentElement.lang=
+language;
+
+}
+
+
+/* =========================
+   ☑️ СОХРАНЕНИЕ
+========================= */
+
+function saveAchievement(number){
+
+const checkbox =
+document.getElementById(
+"achievement"+number
+);
+
+localStorage.setItem(
+"easyAchievement"+number,
+checkbox.checked
+);
+
+
+/* Красивое состояние */
+
+const card =
+checkbox.closest(
+".achievement"
+);
+
+if(checkbox.checked){
+
+card.classList.add(
+"completed"
+);
+
+}else{
+
+card.classList.remove(
+"completed"
+);
+
+}
+
+}
+
+
+/* =========================
+   ☑️ ЗАГРУЗКА ГАЛОЧЕК
+========================= */
+
+function loadAchievements(){
+
+for(let i=1;i<=7;i++){
+
+const saved =
+localStorage.getItem(
+"easyAchievement"+i
+);
+
+const checkbox =
+document.getElementById(
+"achievement"+i
+);
+
+if(saved==="true"){
+
+checkbox.checked=true;
+
+checkbox.closest(
+".achievement"
+).classList.add(
+"completed"
+);
+
+}
+
+}
+
+}
+
+
+/* =========================
+   🚀 ЗАПУСК
+========================= */
+
+applyLanguage();
+
+loadAchievements();
+
+
+/* Если язык изменился */
+
+window.addEventListener(
+"pageshow",
+function(){
+
+applyLanguage();
+
+loadAchievements();
+
+});
+
+</script>
+
+
+</body>
+
+</html>
