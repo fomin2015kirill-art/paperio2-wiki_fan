@@ -18,19 +18,19 @@ body{
     text-align:center;
 }
 
-/* Шапка */
-
 header{
     background:#080808;
     padding:25px 15px;
-    font-size:32px;
-    font-weight:bold;
-    color:#00ff66;
     border-bottom:2px solid #00ff66;
     box-shadow:0 0 20px #00ff6633;
 }
 
-/* Меню */
+header h1{
+    margin:0;
+    color:#00ff66;
+    font-size:32px;
+    text-shadow:0 0 10px #00ff66;
+}
 
 nav{
     display:flex;
@@ -49,7 +49,6 @@ nav a{
     font-size:18px;
     text-decoration:none;
     transition:0.3s;
-    box-shadow:0 0 8px #00ff6618;
 }
 
 nav a:hover{
@@ -58,8 +57,6 @@ nav a:hover{
     color:#000;
     box-shadow:0 0 20px #00ff66;
 }
-
-/* Главная карточка */
 
 #content{
     margin:30px auto;
@@ -72,9 +69,9 @@ nav a:hover{
 }
 
 #content h2{
+    color:#00ff66;
     font-size:30px;
     margin-bottom:20px;
-    color:#00ff66;
 }
 
 #content p{
@@ -83,8 +80,6 @@ nav a:hover{
     line-height:1.6;
 }
 
-/* Информация */
-
 .info{
     max-width:700px;
     margin:20px auto;
@@ -92,7 +87,6 @@ nav a:hover{
     background:#0b0b0b;
     border:1px solid #00ff66;
     border-radius:18px;
-    box-shadow:0 0 10px #00ff6618;
 }
 
 .info h2{
@@ -104,8 +98,6 @@ nav a:hover{
     line-height:1.6;
 }
 
-/* Подвал */
-
 footer{
     margin-top:50px;
     padding:25px;
@@ -114,90 +106,238 @@ footer{
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-🎮 Paper.io 2 Wiki Fan
+    <h1 id="siteTitle">🎮 Paper.io 2 Wiki Fan</h1>
 </header>
 
 <nav>
 
-<a href="skins.html">👤 Скины</a>
+<a href="skins.html" id="skins">👤 Skins</a>
 
-<a href="ranks.html">🏆 Ранги</a>
+<a href="ranks.html" id="ranks">🏆 Ranks</a>
 
-<a href="countries.html">🌍 Страны</a>
+<a href="countries.html" id="countries">🌍 Countries</a>
 
-<a href="bugs.html">🐛 Ошибки</a>
+<a href="bugs.html" id="bugs">🐛 Bugs</a>
 
-<a href="tips.html">⚔️ Советы</a>
+<a href="tips.html" id="tips">⚔️ Tips</a>
 
-<a href="statistics.html">📊 Статистика</a>
+<a href="statistics.html" id="statistics">📊 Statistics</a>
 
-<a href="about.html">ℹ️ О сайте</a>
+<a href="about.html" id="about">ℹ️ About</a>
 
-<a href="settings.html">⚙️ Настройки</a>
+<a href="settings.html" id="settings">⚙️ Settings</a>
 
 </nav>
 
 <div id="content">
 
-<h2>🚀 Добро пожаловать!</h2>
+<h2 id="welcome">🚀 Welcome!</h2>
 
-<p>
-Это фанатская Wiki по Paper.io 2.
+<p id="description">
+This is a fan-made Wiki about Paper.io 2.
 </p>
 
-<p>
-Здесь будут собраны ранги, скины, страны,
-баги, советы и статистика игры.
+<p id="description2">
+Here you can find ranks, skins, countries,
+bugs, tips and game statistics.
 </p>
 
 </div>
 
 <div class="info">
 
-<h2>📚 Разделы Wiki</h2>
+<h2 id="sections">📚 Wiki Sections</h2>
 
-<p>
-👤 Скины — информация о скинах и персонажах.
+<p id="skinsInfo">
+👤 Skins — information about skins and characters.
 </p>
 
-<p>
-🏆 Ранги — система рангов и мировая лига.
+<p id="ranksInfo">
+🏆 Ranks — rank system and world league.
 </p>
 
-<p>
-🌍 Страны — список всех доступных стран.
+<p id="countriesInfo">
+🌍 Countries — list of all available countries.
 </p>
 
-<p>
-🐛 Ошибки — найденные баги и необычные ситуации.
+<p id="bugsInfo">
+🐛 Bugs — discovered bugs and unusual situations.
 </p>
 
-<p>
-⚔️ Советы — полезные способы улучшить игру.
+<p id="tipsInfo">
+⚔️ Tips — useful ways to improve your gameplay.
 </p>
 
-<p>
-📊 Статистика — достижения и статистика игрока.
+<p id="statisticsInfo">
+📊 Statistics — achievements and player statistics.
 </p>
 
 </div>
 
 <footer>
 
-Создано Кириллом ❤️ с помощью ChatGPT
+<span id="created">Created by Kirill ❤️ with ChatGPT</span>
 
 <br><br>
 
-Paper.io 2 Wiki Fan — Beta 0.2
+<span id="version">Paper.io 2 Wiki Fan — Beta 0.2</span>
 
 </footer>
 
+<script>
+
+const translations = {
+
+en:{
+    siteTitle:"🎮 Paper.io 2 Wiki Fan",
+
+    skins:"👤 Skins",
+    ranks:"🏆 Ranks",
+    countries:"🌍 Countries",
+    bugs:"🐛 Bugs",
+    tips:"⚔️ Tips",
+    statistics:"📊 Statistics",
+    about:"ℹ️ About",
+    settings:"⚙️ Settings",
+
+    welcome:"🚀 Welcome!",
+
+    description:"This is a fan-made Wiki about Paper.io 2.",
+
+    description2:"Here you can find ranks, skins, countries, bugs, tips and game statistics.",
+
+    sections:"📚 Wiki Sections",
+
+    skinsInfo:"👤 Skins — information about skins and characters.",
+    ranksInfo:"🏆 Ranks — rank system and world league.",
+    countriesInfo:"🌍 Countries — list of all available countries.",
+    bugsInfo:"🐛 Bugs — discovered bugs and unusual situations.",
+    tipsInfo:"⚔️ Tips — useful ways to improve your gameplay.",
+    statisticsInfo:"📊 Statistics — achievements and player statistics.",
+
+    created:"Created by Kirill ❤️ with ChatGPT",
+    version:"Paper.io 2 Wiki Fan — Beta 0.2"
+},
+
+ru:{
+    siteTitle:"🎮 Фанатская Wiki Paper.io 2",
+
+    skins:"👤 Скины",
+    ranks:"🏆 Ранги",
+    countries:"🌍 Страны",
+    bugs:"🐛 Ошибки",
+    tips:"⚔️ Советы",
+    statistics:"📊 Статистика",
+    about:"ℹ️ О сайте",
+    settings:"⚙️ Настройки",
+
+    welcome:"🚀 Добро пожаловать!",
+
+    description:"Это фанатская Wiki по Paper.io 2.",
+
+    description2:"Здесь будут собраны ранги, скины, страны, баги, советы и статистика игры.",
+
+    sections:"📚 Разделы Wiki",
+
+    skinsInfo:"👤 Скины — информация о скинах и персонажах.",
+    ranksInfo:"🏆 Ранги — система рангов и мировая лига.",
+    countriesInfo:"🌍 Страны — список всех доступных стран.",
+    bugsInfo:"🐛 Ошибки — найденные баги и необычные ситуации.",
+    tipsInfo:"⚔️ Советы — полезные способы улучшить игру.",
+    statisticsInfo:"📊 Статистика — достижения и статистика игрока.",
+
+    created:"Создано Кириллом ❤️ с помощью ChatGPT",
+    version:"Paper.io 2 Wiki Fan — Beta 0.2"
+},
+
+uk:{
+    siteTitle:"🎮 Фанатська Wiki Paper.io 2",
+
+    skins:"👤 Скіни",
+    ranks:"🏆 Ранги",
+    countries:"🌍 Країни",
+    bugs:"🐛 Помилки",
+    tips:"⚔️ Поради",
+    statistics:"📊 Статистика",
+    about:"ℹ️ Про сайт",
+    settings:"⚙️ Налаштування",
+
+    welcome:"🚀 Ласкаво просимо!",
+
+    description:"Це фанатська Wiki про Paper.io 2.",
+
+    description2:"Тут зібрані ранги, скіни, країни, баги, поради та статистика гри.",
+
+    sections:"📚 Розділи Wiki",
+
+    skinsInfo:"👤 Скіни — інформація про скіни та персонажів.",
+    ranksInfo:"🏆 Ранги — система рангів і світова ліга.",
+    countriesInfo:"🌍 Країни — список усіх доступних країн.",
+    bugsInfo:"🐛 Помилки — знайдені баги та незвичайні ситуації.",
+    tipsInfo:"⚔️ Поради — корисні способи покращити гру.",
+    statisticsInfo:"📊 Статистика — досягнення та статистика гравця.",
+
+    created:"Створено Кирилом ❤️ за допомогою ChatGPT",
+    version:"Paper.io 2 Wiki Fan — Beta 0.2"
+}
+
+};
+
+
+function applyLanguage(language){
+
+    const t = translations[language] || translations.en;
+
+    document.getElementById("siteTitle").textContent = t.siteTitle;
+
+    document.getElementById("skins").textContent = t.skins;
+    document.getElementById("ranks").textContent = t.ranks;
+    document.getElementById("countries").textContent = t.countries;
+    document.getElementById("bugs").textContent = t.bugs;
+    document.getElementById("tips").textContent = t.tips;
+    document.getElementById("statistics").textContent = t.statistics;
+    document.getElementById("about").textContent = t.about;
+    document.getElementById("settings").textContent = t.settings;
+
+    document.getElementById("welcome").textContent = t.welcome;
+
+    document.getElementById("description").textContent = t.description;
+    document.getElementById("description2").textContent = t.description2;
+
+    document.getElementById("sections").textContent = t.sections;
+
+    document.getElementById("skinsInfo").textContent = t.skinsInfo;
+    document.getElementById("ranksInfo").textContent = t.ranksInfo;
+    document.getElementById("countriesInfo").textContent = t.countriesInfo;
+    document.getElementById("bugsInfo").textContent = t.bugsInfo;
+    document.getElementById("tipsInfo").textContent = t.tipsInfo;
+    document.getElementById("statisticsInfo").textContent = t.statisticsInfo;
+
+    document.getElementById("created").textContent = t.created;
+    document.getElementById("version").textContent = t.version;
+
+    document.documentElement.lang = language;
+}
+
+
+/* Первый вход = English */
+
+let language = localStorage.getItem("siteLanguage");
+
+if(!language){
+    language = "en";
+    localStorage.setItem("siteLanguage","en");
+}
+
+applyLanguage(language);
+
+</script>
+
 </body>
-</html>
+    </html>
 
